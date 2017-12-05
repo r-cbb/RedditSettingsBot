@@ -25,6 +25,22 @@ def get_teams():
 		flairs[team]=flair
 		rank_names[rank_name]=team
 	return flairs,rank_names
+	
+def get_gamethreads(r):
+	submissions = r.redditor('cbbbot').submissions.new()
+	
+	url = {}
+	# botposttime = {}
+	
+	for submission in submissions:
+		link = submission.permalink
+		title = submission.title
+		time_created = submission.created_utc
+		
+		url[title]=link
+		# botposttime[url]=time_created
+	return url # ,botposttime
+	
 
 def getrankings():
 	with open('settingsbot/ranking.txt','r') as imp_file:
@@ -58,7 +74,7 @@ def getheaderrankingslist():
 		n=n+1
 	return rankings
 				
-def updateschedule():
+def updateschedule(r):
 
 	MODE_ACTIVE = 0
 	MODE_INACTIVE = 1
@@ -77,6 +93,10 @@ def updateschedule():
 	games = dict()
 	
 	allgamestr = ''
+	
+	(teams,rank_names)=get_teams()
+	url=get_gamethreads(r)
+	teamranking = getheaderrankingslist()
 	
 	for event in scoreData['events']:
 		game = dict()
@@ -124,8 +144,6 @@ def updateschedule():
 		else:
 			gametime = game['time']
 		
-		(teams,rank_names)=get_teams()
-		teamranking = getheaderrankingslist()
 		if team1 in teams.keys():
 			team1flair = teams[team1]
 		else:
@@ -160,8 +178,15 @@ def updateschedule():
 			
 		except:
 			gamestring += " | "
+
+		for key in url.keys():
+			(awaykey,homekey)=str(key).replace('[Game Thread] ','').split('@')
 			
-		gamestring += str(score1) + "-" + str(score2)
+			if team1 == homekey and team2==homekey[0:len(team2)] and homekey[len(team2)+1:].startswith(' ('):
+				gamestring += "[" + str(score1) + "-" + str(score2) + "](" + url[key] + ")"
+				break
+		else:
+			gamestring += str(score1) + "-" + str(score2)
 		
 		allgamestr += gamestring + '\n'
 		
@@ -170,7 +195,7 @@ def updateschedule():
 def updatesidebar():
 	r = scriptlogin()
 	
-	sidebarstring = strings.PreTop25 + getrankings() + strings.BetweenTop25andSchedule + updateschedule() + getheaderrankings() + strings.PostTop25Header
+	sidebarstring = strings.PreTop25 + getrankings() + strings.BetweenTop25andSchedule + updateschedule(r) + getheaderrankings() + strings.PostTop25Header
 	
 	settings=r.subreddit('cbbprivateflairtest').mod.settings()
 	
