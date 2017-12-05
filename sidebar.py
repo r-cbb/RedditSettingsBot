@@ -173,7 +173,7 @@ def updatesidebar():
 	
 	settings=r.subreddit('cbbprivateflairtest').mod.settings()
 	
-	if sidebarstring != settings:
+	if sidebarstring != settings["description"]:
 		print('Does Not Equal, Resetting')
 		r.subreddit('cbbprivateflairtest').mod.update(description=sidebarstring)
 	else:
