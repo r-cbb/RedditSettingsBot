@@ -3,178 +3,30 @@ import json
 import time
 from fake_useragent import UserAgent
 import html
-import obot_cinciforthewin
+import reddit_login
 import urllib.request
 import shutil
 import os
 import re
-
-PreTop25 = """ | | | | | | | | | |
----|---|----|----|----|----|----|----|----|----
-[](https://www.reddit.com/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](https://www.reddit.com/r/cbbprivateflairtest) | [](https://www.reddit.com/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](https://www.reddit.com/r/cbbprivateflairtest)
-[](https://www.reddit.com/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](https://www.reddit.com/r/cbbprivateflairtest) | [](https://www.reddit.com/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](https://www.reddit.com/r/cbbprivateflairtest)
-[](https://www.reddit.com/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](https://www.reddit.com/r/cbbprivateflairtest) | [](https://www.reddit.com/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](https://www.reddit.com/r/cbbprivateflairtest)
-
-#### 
-
-###[Select Flair](/r/cbbprivateflairtest/wiki/flair)
-###[Subreddit Rules](https://www.reddit.com/r/cbbprivateflairtest/wiki/rules_guidelines)
-###[Create a Game Thread](https://www.reddit.com/r/cbbprivateflairtest/comments/5o5at9/introducing_ucbbbot_an_easier_way_of_making_game/)
-###[Join us on Discord](https://discord.gg/74Bswry)
-| | | | |
-:--:|:--:|:---|:---
-[User Poll](http://cbbpoll.com/)|
-Rank||Team (FPV)|Score"""
-
-top25string = """
-#1|[](#f/duke)|Duke (43)|2055
-#2|[](#f/michiganstate)|Michigan State (20)|1952
-#2|[](#f/arizona)|Arizona (17)|1952
-#4|[](#f/kansas)|Kansas (3)|1902
-#5|[](#f/villanova)|Villanova |1748
-#6|[](#f/wichitastate)|Wichita State (1)|1615
-#7|[](#f/florida)|Florida |1447
-#8|[](#f/northcarolina)|North Carolina |1409
-#9|[](#f/kentucky)|Kentucky |1389
-#10|[](#f/usc)|USC |1333
-#11|[](#f/cincinnati)|Cincinnati |1219
-#12|[](#f/miami)|Miami (FL) |1122
-#13|[](#f/notredame)|Notre Dame |991
-#14|[](#f/texasam)|Texas A&M |939
-#15|[](#f/xavier)|Xavier |857
-#16|[](#f/minnesota)|Minnesota |700
-#17|[](#f/purdue)|Purdue |689
-#18|[](#f/louisville)|Louisville |682
-#19|[](#f/gonzaga)|Gonzaga (1)|662
-#20|[](#f/setonhall)|Seton Hall |427
-#21|[](#f/westvirginia)|West Virginia |410
-#22|[](#f/stmarys)|St. Mary's |378
-#23|[](#f/northwestern)|Northwestern |307
-#24|[](#f/baylor)|Baylor |280
-#25|[](#f/ucla)|UCLA |261"""
-
-BetweenTop25andSchedule = """
-
-| | | | | |
-:--:|:--:|:---:|:---:|:---:
-Schedule|
-Time (EsT) | Home | Away | TV | Score
-"""
-
-Top25Header = """
-
-#### [](#f/duke) [](#f/michiganstate) [](#f/arizona) [](#f/kansas) [](#f/villanova) [](#f/wichitastate) [](#f/florida) [](#f/northcarolina) [](#f/kentucky) [](#f/usc) [](#f/cincinnati) [](#f/miami) [](#f/notredame) [](#f/texasam) [](#f/xavier) [](#f/minnesota) [](#f/purdue) [](#f/louisville) [](#f/gonzaga) [](#f/setonhall) [](#f/westvirginia) [](#f/stmarys) [](#f/northwestern) [](#f/baylor) [](#f/ucla)
-"""
-
-PostTop25Header = """
-##Resources##
-  
-#**Useful Links**
-
-[Twitter (@redditCBB)](https://twitter.com/redditCBB)  
-[Daily Schedule (ESPN)](http://espn.go.com/mens-college-basketball/schedule)  
-[/r/CollegeBasketball Bracket Challenge](https://brackets.qxlp.net/)  
-
-#**Subreddit Tools**
-
-[/r/CollegeBasketball wiki](https://www.reddit.com/r/CollegeBasketball/wiki/index)    
-[Subreddit Rules](https://www.reddit.com/r/CollegeBasketball/wiki/rules_guidelines)  
-[Inline Flair](https://www.reddit.com/r/CollegeBasketball/wiki/inlineflair)  
-
-#**Archives**
-
-[AMA Archive](http://www.reddit.com/r/collegebasketball/search?q=flair%3A%27ama%27&sort=new&restrict_sr=on)  
-[Game Thread Archive](https://www.reddit.com/r/CollegeBasketball/search?q=flair%3A%27game+thread%27&restrict_sr=on&sort=new&t=all)  
-[Trash Talk Archive](https://www.reddit.com/r/CollegeBasketball/search?q=flair%3A%27trash+talk%27&restrict_sr=on&sort=new&t=all)  
-[Announcements Archive](http://www.reddit.com/r/collegebasketball/search?q=flair%3A%27modpost%27&sort=new&restrict_sr=on)  
-
-#**Other**
-
-[New to reddit? Click here!](/wiki/reddit_101)  
-[kenpom.com](http://kenpom.com/)  
-[ESPN](http://www.espn.com/)
-
-
-##Related Subreddits##
-#[Specific Schools/Conferences](http://www.reddit.com/r/CollegeBasketball/wiki/relatedsubreddits)
-#/r/ncaaBballstreams  
-#/r/sports  
-#/r/nba  
-#/r/wnba  
-#/r/cbbcirclejerk  
-#/r/CFB  
-#/r/CollegeBaseball  
-#/r/CollegeSoccer  
-#/r/NCAAW  
-#/r/BracketChallenge  
-#/r/ea2kcbb  
-#/r/HSbball"""
-
-tv_flairs={'BTN':'[](#f/btn)','CBS':'[](#f/cbs)','CBSSN':'[](#f/cbssn)','ESPN':'[](#f/espn)','ESPN2':'[](#f/espn2)','ESPN3':'[](#f/espn3)','ESPNU':'[](#f/espnu)','FOX':'[](#f/fox)','FS1':'[](#f/fs1)','FSN':'[](#f/fsn)','Longhorn Network':'[](#f/lhn)','NBC':'[](#f/nbc)','NBCSN':'[](#f/nbcsn)','PAC12':'[](#f/p12n)','SECN':'[](#f/secn)','SECN+':'[](#f/secn)','TBS':'[](#f/tbs)','TNT':'[](#f/tnt)','truTV':'[](#f/trutv)'}
+import strings
 
 def scriptlogin():
-	r = obot_cinciforthewin.login()
+	r = reddit_login.login()
 	return r
 	
 def get_teams():
-  with open('team_list.txt','r') as imp_file:
-    lines=imp_file.readlines()
-  flairs={}
-  rank_names={}
-  for line in lines:
-    (team,flair,rank_name)=line.replace('\n','').split(',')
-    flairs[team]=flair
-    rank_names[rank_name]=team
-  return flairs,rank_names
-
-def get_rcbb_poll():
-	(flairs,rank_names)=get_teams()
-	url='http://cbbpoll.com/'
-	with urllib.request.urlopen(url) as response, open ('ranking.html', 'wb') as out_file:
-		shutil.copyfileobj(response, out_file)
-	with open('ranking.html','r') as imp_file:
+	with open('settingsbot/team_list.txt','r') as imp_file:
 		lines=imp_file.readlines()
-	ranking,headerranking,first_place_votes=[],[],[]
-	i=1
-	while i<125:
-		first_place_votes.append('('+str(i)+')')
-		i=i+1
-
+	flairs={}
+	rank_names={}
 	for line in lines:
-		if "<td><span class='team-name'>" in line:
-			# Rank
-			team_rank=lines[lines.index(line)-1].replace('<td>','').replace('</td>','')
-			# Team, FPV
-			line=line.replace('&#39;',"'").replace('&#38;','&')
-			begin=line.find('></span>')
-			end=line.find('</span></td>')
-			team=line[begin+9:end]
-			for vote in first_place_votes:
-				if vote in team:
-					team=team.replace(vote,'')
-					team_fpv=vote
-					break
-			# Votes
-			team_vote=lines[lines.index(line)+1].replace('<td>','').replace('</td>','')
-			
-			ranking.append("#"+str(int(team_rank))+"|"+flairs[rank_names[team.replace('&amp;','&')]]+"|"+team.replace('&amp;','&')+" "+team_fpv+"|"+str(int(team_vote)))
-			
-			headerranking.append(flairs[rank_names[team.replace('&amp;','&')]])
-			
-		os.remove('ranking.html')
-		with open('ranking.txt','w') as f:
-			for team in ranking:
-				f.write(team+'\n')
-		
-		with open('headerranking.txt','w') as f:
-			for team in headerranking:
-				if team == headerranking[-1]:
-					f.write(team)
-				else:
-					f.write(team+' ')
+		(team,flair,rank_name)=line.replace('\n','').split(',')
+		flairs[team]=flair
+		rank_names[rank_name]=team
+	return flairs,rank_names
 
 def getrankings():
-	with open('ranking.txt','r') as imp_file:
+	with open('settingsbot/ranking.txt','r') as imp_file:
 		lines=imp_file.readlines()
 	sidebarrankings='\n'
 	for line in lines:
@@ -182,7 +34,7 @@ def getrankings():
 	return sidebarrankings
 		
 def getheaderrankings():
-	with open('headerranking.txt','r') as imp_file:
+	with open('settingsbot/headerranking.txt','r') as imp_file:
 		lines=imp_file.readlines()
 	headerranking='#### '
 	for line in lines:
@@ -190,7 +42,7 @@ def getheaderrankings():
 	return headerranking
 	
 def getheaderrankingslist():
-	with open('headerranking.txt','r') as imp_file:
+	with open('settingsbot/headerranking.txt','r') as imp_file:
 		lines=imp_file.readlines()
 	flairs = lines[0].split(' ')
 	ranking = []
@@ -296,8 +148,8 @@ def updateschedule():
 		try:
 			game['network'] = event['competitions'][0]['broadcasts'][0]['names'][0]
 			
-			if game['network'] in tv_flairs.keys():
-				networkstring=tv_flairs[game['network']]
+			if game['network'] in strings.tv_flairs.keys():
+				networkstring=strings.tv_flairs[game['network']]
 			else:
 				networkstring=game['network']
 			
@@ -316,12 +168,15 @@ def updateschedule():
 
 def updatesidebar():
 	r = scriptlogin()
-	# allgamestr = updateschedule()
-	# top25string
-	# Top25Header
 	
-	sidebarstring = PreTop25 + getrankings() + BetweenTop25andSchedule + updateschedule() + getheaderrankings() + PostTop25Header
+	sidebarstring = strings.PreTop25 + getrankings() + strings.BetweenTop25andSchedule + updateschedule() + getheaderrankings() + strings.PostTop25Header
 	
-	r.subreddit('cbbprivateflairtest').mod.update(description=sidebarstring)
+	settings=r.subreddit('cbbprivateflairtest').mod.settings()
 	
-# updatesidebar()
+	if sidebarstring != settings:
+		print('Does Not Equal, Resetting')
+		r.subreddit('cbbprivateflairtest').mod.update(description=sidebarstring)
+	else:
+		print('Doing Nothing, As they are the same')
+	
+updatesidebar()
