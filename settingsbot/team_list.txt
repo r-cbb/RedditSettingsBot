@@ -328,7 +328,7 @@ Vermont,[](#f/vermont),UVM
 Villanova,[](#f/villanova),Villanova
 Virginia,[](#f/virginia),Virginia
 Virginia Tech,[](#f/virginiatech),Virginia Tech
-VMI,[](#f/virginiamilitaryinstitute),VMI
+VMI,[](#f/vmi),VMI
 Wagner,[](#f/wagner),Wagner
 Wake Forest,[](#f/wakeforest),Wake Forest
 Washington,[](#f/washington),Washington

@@ -9,6 +9,7 @@ import shutil
 import os
 import re
 import strings
+import time
 
 def scriptlogin():
 	r = reddit_login.login()
@@ -179,4 +180,12 @@ def updatesidebar():
 	else:
 		print('Doing Nothing, As they are the same')
 	
-updatesidebar()
+while True:
+	updatesidebar()
+	print('Sleeping for 180 seconds')
+	time.sleep(60)
+	print('Sleeping for 120 seconds')
+	time.sleep(60)
+	print('Sleeping for 60 seconds')
+	time.sleep(60)
+	
