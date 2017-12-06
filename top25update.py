@@ -39,6 +39,9 @@ def get_rcbb_poll():
 					team=team.replace(vote,'')
 					team_fpv=vote
 					break
+			else:
+				team_fpv=''
+				
 			# Votes
 			team_vote=lines[lines.index(line)+1].replace('<td>','').replace('</td>','')
 			

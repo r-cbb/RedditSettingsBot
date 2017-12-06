@@ -182,7 +182,45 @@ def updateschedule(r):
 		for key in url.keys():
 			(awaykey,homekey)=str(key).replace('[Game Thread] ','').split('@')
 			
-			if team1 == homekey and team2==homekey[0:len(team2)] and homekey[len(team2)+1:].startswith(' ('):
+			if awaykey.startswith('#'):
+				# print('Entered Away If Statement')
+				i = 1
+				while i < 26:
+					# print('#'+str(i))
+					if awaykey.startswith('#'+str(i)+' '):
+						if i < 10:
+							awaykey=awaykey[3:]
+						else:
+							awaykey=awaykey[4:]
+						break
+					i = i + 1
+			
+			if homekey[1:].startswith('#'):
+				# print('Entered Home If Statement')
+				i = 1
+				while i < 26:
+					# print('#'+str(i))
+					if homekey[1:].startswith('#'+str(i)+' '):
+						if i < 10:
+							homekey=homekey[4:]
+						else:
+							homekey=homekey[5:]
+						break
+					i = i + 1
+			else:
+				homekey=homekey[1:]
+			
+			# print("AwayKey:"+awaykey[:-1]+". Away:"+team2+".")
+			# print()
+			
+			# print("HomeKey:" + homekey[0:len(team1)]+". Home:" + team1+". "+homekey[len(team2)-1:])
+			# print()
+			# print(homekey[len(team2)-1:])
+			
+			# time.sleep(0.1)
+			
+			# if team2 == awaykey[:-1] and team1 == homekey[0:len(team1)] and homekey[len(team1)-1:].startswith('('):
+			if team2 == awaykey[:-1] and team1 == homekey[0:len(team1)]:
 				gamestring += "[" + str(score1) + "-" + str(score2) + "](" + url[key] + ")"
 				break
 		else:
@@ -206,7 +244,11 @@ def updatesidebar():
 		print('Doing Nothing, As they are the same')
 	
 while True:
-	updatesidebar()
+	try:
+		updatesidebar()
+	except:
+		print('Failed to Update Sidebar')
+		continue
 	print('Sleeping for 180 seconds')
 	time.sleep(60)
 	print('Sleeping for 120 seconds')
