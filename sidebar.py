@@ -1,78 +1,98 @@
 from urllib.request import urlopen, Request
+from fake_useragent import UserAgent
 import json
 import time
-from fake_useragent import UserAgent
 import html
-import reddit_login
-import urllib.request
 import shutil
-import os
 import re
 import strings
-import time
+import reddit_login
 
 def scriptlogin():
-	r = reddit_login.login()
-	return r
+	try:
+		r = reddit_login.login()
+		return r
+	except:
+		print("Failed to Login")
+		raise
 	
 def get_teams():
-	with open('settingsbot/team_list.txt','r') as imp_file:
-		lines=imp_file.readlines()
-	flairs={}
-	rank_names={}
-	for line in lines:
-		(team,flair,rank_name)=line.replace('\n','').split(',')
-		flairs[team]=flair
-		rank_names[rank_name]=team
-	return flairs,rank_names
+	try:
+		with open('settingsbot/team_list.txt','r') as imp_file:
+			lines=imp_file.readlines()
+		flairs={}
+		rank_names={}
+		for line in lines:
+			(team,flair,rank_name)=line.replace('\n','').split(',')
+			flairs[team]=flair
+			rank_names[rank_name]=team
+		return flairs,rank_names
+	except:
+		print("Failed to finish get_teams")
+		raise
 	
 def get_gamethreads(r):
-	submissions = r.redditor('cbbbot').submissions.new()
-	
-	url = {}
-	# botposttime = {}
-	
-	for submission in submissions:
-		link = submission.permalink
-		title = submission.title
-		time_created = submission.created_utc
+	try:
+		submissions = r.redditor('cbbbot').submissions.new()
 		
-		url[title]=link
-		# botposttime[url]=time_created
-	return url # ,botposttime
-	
+		url = {}
+		# botposttime = {}
+		
+		for submission in submissions:
+			link = submission.permalink
+			title = submission.title
+			time_created = submission.created_utc
+			
+			url[title]=link
+			# botposttime[url]=time_created
+		return url # ,botposttime
+	except:
+		print("Failed to Grab cbbbot Submissions")
+		raise
 
 def getrankings():
-	with open('settingsbot/ranking.txt','r') as imp_file:
-		lines=imp_file.readlines()
-	sidebarrankings='\n'
-	for line in lines:
-		sidebarrankings += line
-	return sidebarrankings
+	try:
+		with open('settingsbot/ranking.txt','r') as imp_file:
+			lines=imp_file.readlines()
+		sidebarrankings='\n'
+		for line in lines:
+			sidebarrankings += line
+		return sidebarrankings
+	except:
+		print("Failed to Pull Sidebar Team Rankings")
+		raise
 		
 def getheaderrankings():
-	with open('settingsbot/headerranking.txt','r') as imp_file:
-		lines=imp_file.readlines()
-	headerranking='#### '
-	for line in lines:
-		headerranking += line
-	return headerranking
+	try:
+		with open('settingsbot/headerranking.txt','r') as imp_file:
+			lines=imp_file.readlines()
+		headerranking='#### '
+		for line in lines:
+			headerranking += line
+		return headerranking
+	except:
+		print("Failed to Pull Header Team Rankings")
+		raise
 	
 def getheaderrankingslist():
-	with open('settingsbot/headerranking.txt','r') as imp_file:
-		lines=imp_file.readlines()
-	flairs = lines[0].split(' ')
-	ranking = []
-	i = 1
-	while i<26:
-		ranking.append(str(i))
-		i=i+1
-	n = 0
-	rankings={}
-	for flair in flairs:
-		rankings[flair]=str(ranking[n])
-		n=n+1
-	return rankings
+	try:
+		with open('settingsbot/headerranking.txt','r') as imp_file:
+			lines=imp_file.readlines()
+		flairs = lines[0].split(' ')
+		ranking = []
+		i = 1
+		while i<26:
+			ranking.append(str(i))
+			i=i+1
+		n = 0
+		rankings={}
+		for flair in flairs:
+			rankings[flair]=str(ranking[n])
+			n=n+1
+		return rankings
+	except:
+		print("Failed to Create a list of ranked flairs")
+		raise
 				
 def updateschedule(r):
 
@@ -82,8 +102,12 @@ def updateschedule(r):
 	GAME_STATUS_IN = 1
 	GAME_STATUS_POST = 2
 	
-	req = Request("http://www.espn.com/mens-college-basketball/scoreboard/_/group/50/?t=" + str(time.time()))
-	req.headers["User-Agent"] = UserAgent(verify_ssl=False).chrome
+	try:
+		req = Request("http://www.espn.com/mens-college-basketball/scoreboard/_/group/50/?t=" + str(time.time()))
+		req.headers["User-Agent"] = UserAgent(verify_ssl=False).chrome
+	except:
+		print("Failed to Pull ESPN json file")
+		raise
 
 	# Load data
 	scoreData = urlopen(req).read().decode("utf-8")
@@ -139,7 +163,7 @@ def updateschedule(r):
 		if game['status'] == GAME_STATUS_PRE:
 			searchedstring = re.search(' - (.*) EST',game['time'])
 			gametime = searchedstring.group(1)
-		elif game['status'] == GAME_STATUS_IN and game['time'] != "Halftime" and game['time'] != "Delayed":
+		elif game['status'] == GAME_STATUS_IN and game['time'] != "Halftime" and game['time'] != "Delayed" and game['time'] != "End of 2nd":
 			gametime = game['time'].replace(" - "," (") + ")"
 		else:
 			gametime = game['time']
@@ -179,6 +203,7 @@ def updateschedule(r):
 		except:
 			gamestring += " | "
 
+		
 		for key in url.keys():
 			(awaykey,homekey)=str(key).replace('[Game Thread] ','').split('@')
 			
@@ -246,13 +271,11 @@ def updatesidebar():
 while True:
 	try:
 		updatesidebar()
+		print('Sleeping for 180 seconds')
+		time.sleep(180)
+	except KeyboardInterrupt:
+		print('User Keyboard Exit')
+		quit()
 	except:
 		print('Failed to Update Sidebar')
-		continue
-	print('Sleeping for 180 seconds')
-	time.sleep(60)
-	print('Sleeping for 120 seconds')
-	time.sleep(60)
-	print('Sleeping for 60 seconds')
-	time.sleep(60)
 	

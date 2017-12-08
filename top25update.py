@@ -1,5 +1,6 @@
 import urllib.request
 import shutil
+# import os
 
 def get_teams():
 	with open('settingsbot/team_list.txt','r') as imp_file:
@@ -49,7 +50,7 @@ def get_rcbb_poll():
 			
 			headerranking.append(flairs[rank_names[team.replace('&amp;','&')]])
 			
-		# os.remove('ranking.html')
+		# os.remove('settingsbot/ranking.html')
 		with open('settingsbot/ranking.txt','w') as f:
 			for team in ranking:
 				f.write(team+'\n')
