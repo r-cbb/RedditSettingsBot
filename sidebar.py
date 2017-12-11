@@ -3,8 +3,7 @@ from fake_useragent import UserAgent
 import json
 import time
 import html
-import shutil
-import re
+from re import search
 import strings
 import reddit_login
 
@@ -268,14 +267,9 @@ def updatesidebar():
 	else:
 		print('Doing Nothing, As they are the same')
 	
-while True:
-	try:
-		updatesidebar()
-		print('Sleeping for 180 seconds')
-		time.sleep(180)
-	except KeyboardInterrupt:
-		print('User Keyboard Exit')
-		quit()
-	except:
-		print('Failed to Update Sidebar')
-	
+try:
+	updatesidebar()
+except:
+	print('Failed to Update Sidebar')
+	quit()
+quit()

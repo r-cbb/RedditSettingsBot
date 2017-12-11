@@ -62,4 +62,9 @@ def get_rcbb_poll():
 				else:
 					f.write(team+' ')
 
-get_rcbb_poll()
+try:
+	get_rcbb_poll()
+except:
+	print("Failed to Pull cbb poll")
+	quit()
+quit()
