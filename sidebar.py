@@ -3,7 +3,7 @@ from fake_useragent import UserAgent
 import json
 import time
 import html
-from re import search
+import re
 import strings
 import reddit_login
 
@@ -17,7 +17,7 @@ def scriptlogin():
 	
 def get_teams():
 	try:
-		with open('settingsbot/team_list.txt','r') as imp_file:
+		with open('cbbscorebot/team_list.txt','r') as imp_file:
 			lines=imp_file.readlines()
 		flairs={}
 		rank_names={}
@@ -51,7 +51,7 @@ def get_gamethreads(r):
 
 def getrankings():
 	try:
-		with open('settingsbot/ranking.txt','r') as imp_file:
+		with open('cbbscorebot/ranking.txt','r') as imp_file:
 			lines=imp_file.readlines()
 		sidebarrankings='\n'
 		for line in lines:
@@ -63,7 +63,7 @@ def getrankings():
 		
 def getheaderrankings():
 	try:
-		with open('settingsbot/headerranking.txt','r') as imp_file:
+		with open('cbbscorebot/headerranking.txt','r') as imp_file:
 			lines=imp_file.readlines()
 		headerranking='#### '
 		for line in lines:
@@ -75,7 +75,7 @@ def getheaderrankings():
 	
 def getheaderrankingslist():
 	try:
-		with open('settingsbot/headerranking.txt','r') as imp_file:
+		with open('cbbscorebot/headerranking.txt','r') as imp_file:
 			lines=imp_file.readlines()
 		flairs = lines[0].split(' ')
 		ranking = []

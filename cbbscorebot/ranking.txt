@@ -1,0 +1,25 @@
+#1|[](#f/villanova)|Villanova (65)|1984
+#2|[](#f/michiganstate)|Michigan State (15)|1907
+#3|[](#f/duke)|Duke |1726
+#4|[](#f/wichitastate)|Wichita State |1666
+#5|[](#f/miami)|Miami (FL) |1608
+#6|[](#f/northcarolina)|North Carolina |1524
+#7|[](#f/kentucky)|Kentucky |1403
+#8|[](#f/arizonastate)|Arizona State |1402
+#9|[](#f/texasam)|Texas A&M |1347
+#10|[](#f/xavier)|Xavier |1282
+#11|[](#f/westvirginia)|West Virginia |1218
+#12|[](#f/kansas)|Kansas |986
+#13|[](#f/gonzaga)|Gonzaga |925
+#14|[](#f/virginia)|Virginia |879
+#15|[](#f/tcu)|TCU |866
+#15|[](#f/setonhall)|Seton Hall |866
+#17|[](#f/purdue)|Purdue |691
+#18|[](#f/notredame)|Notre Dame |621
+#19|[](#f/floridastate)|Florida State |594
+#20|[](#f/florida)|Florida |429
+#21|[](#f/tennessee)|Tennessee |385
+#22|[](#f/texastech)|Texas Tech |372
+#23|[](#f/baylor)|Baylor |302
+#24|[](#f/cincinnati)|Cincinnati |290
+#25|[](#f/arizona)|Arizona |246

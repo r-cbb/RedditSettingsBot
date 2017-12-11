@@ -3,7 +3,7 @@ import shutil
 # import os
 
 def get_teams():
-	with open('settingsbot/team_list.txt','r') as imp_file:
+	with open('cbbscorebot/team_list.txt','r') as imp_file:
 		lines=imp_file.readlines()
 	flairs={}
 	rank_names={}
@@ -16,9 +16,9 @@ def get_teams():
 def get_rcbb_poll():
 	(flairs,rank_names)=get_teams()
 	url='http://cbbpoll.com/'
-	with urllib.request.urlopen(url) as response, open ('settingsbot/ranking.html', 'wb') as out_file:
+	with urllib.request.urlopen(url) as response, open ('cbbscorebot/ranking.html', 'wb') as out_file:
 		shutil.copyfileobj(response, out_file)
-	with open('settingsbot/ranking.html','r') as imp_file:
+	with open('cbbscorebot/ranking.html','r') as imp_file:
 		lines=imp_file.readlines()
 	ranking,headerranking,first_place_votes=[],[],[]
 	i=1
@@ -50,12 +50,12 @@ def get_rcbb_poll():
 			
 			headerranking.append(flairs[rank_names[team.replace('&amp;','&')]])
 			
-		# os.remove('settingsbot/ranking.html')
-		with open('settingsbot/ranking.txt','w') as f:
+		# os.remove('cbbscorebot/ranking.html')
+		with open('cbbscorebot/ranking.txt','w') as f:
 			for team in ranking:
 				f.write(team+'\n')
 		
-		with open('settingsbot/headerranking.txt','w') as f:
+		with open('cbbscorebot/headerranking.txt','w') as f:
 			for team in headerranking:
 				if team == headerranking[-1]:
 					f.write(team)
