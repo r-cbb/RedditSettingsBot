@@ -67,4 +67,4 @@ PostTop25Header = """
 #/r/ea2kcbb  
 #/r/HSbball"""
 
-tv_flairs={'BTN':'[](#f/btn)','CBS':'[](#f/cbs)','CBSSN':'[](#f/cbssn)','ESPN':'[](#f/espn)','ESPN2':'[](#f/espn2)','ESPN3':'[](#f/espn3)','ESPNU':'[](#f/espnu)','FOX':'[](#f/fox)','FS1':'[](#f/fs1)','FSN':'[](#f/fsn)','Longhorn Network':'[](#f/lhn)','NBC':'[](#f/nbc)','NBCSN':'[](#f/nbcsn)','PAC12':'[](#f/p12n)','SECN':'[](#f/secn)','SECN+':'[](#f/secn)','TBS':'[](#f/tbs)','TNT':'[](#f/tnt)','truTV':'[](#f/trutv)'}
+tv_flairs={'BTN':'[](#f/btn)','CBS':'[](#f/cbs)','CBSSN':'[](#f/cbssn)','ESPN':'[](#f/espn)','ESPN2':'[](#f/espn2)','ESPN3':'[](#f/espn3)','ESPNU':'[](#f/espnu)','FOX':'[](#f/fox)','FS1':'[](#f/fs1)','FSN':'[](#f/fsn)','Longhorn Network':'[](#f/lhn)','NBC':'[](#f/nbc)','NBCSN':'[](#f/nbcsn)','PAC12':'[](#f/p12n)','SECN':'[](#f/secn)','SECN+':'[](#f/secn)','TBS':'[](#f/tbs)','TNT':'[](#f/tnt)','truTV':'[](#f/trutv)','ACCNE':'[](#f/accne)'}
