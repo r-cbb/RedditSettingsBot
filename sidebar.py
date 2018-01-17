@@ -262,7 +262,10 @@ def updateschedule(r):
 		else:
 			restgamestr += gamestring + '\n'
 		
-	allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr + "---- | **All** | **Games** | ---- | ---- \n" + restgamestr
+		if top25gamestr != '':
+			allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr + "---- | **All** | **Games** | ---- | ---- \n" + restgamestr
+		else:
+			allgamestr = restgamestr
 		
 	return allgamestr
 
