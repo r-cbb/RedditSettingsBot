@@ -116,12 +116,17 @@ def updateschedule(r):
 	games = dict()
 	
 	allgamestr = ''
+	top25gamestr = ''
+	restgamestr = ''
 	
 	(teams,rank_names)=get_teams()
 	url=get_gamethreads(r)
 	teamranking = getheaderrankingslist()
 	
 	for event in scoreData['events']:
+		team1in25 = False
+		team2in25 = False
+		
 		game = dict()
 
 		game["date"] = event['date']
@@ -175,6 +180,7 @@ def updateschedule(r):
 				
 		if team1flair in teamranking.keys():
 			team1flair = "^#"+str(teamranking[team1flair])+' '+team1flair
+			team1in25 = True
 			
 		if team2 in teams.keys():
 			team2flair = teams[team2]
@@ -184,6 +190,7 @@ def updateschedule(r):
 		
 		if team2flair in teamranking.keys():
 			team2flair = "^#"+str(teamranking[team2flair])+' '+team2flair
+			team2in25 = True
 		
 		gamestring = gametime + " | " + team1flair + " | " + team2flair + " | "
 
@@ -250,7 +257,12 @@ def updateschedule(r):
 		else:
 			gamestring += str(score1) + "-" + str(score2)
 		
-		allgamestr += gamestring + '\n'
+		if team1in25 == True or team2in25 == True:
+			top25gamestr += gamestring + '\n'
+		else:
+			restgamestr += gamestring + '\n'
+		
+	allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr + "---- | **All** | **Games** | ---- | ---- \n" + restgamestr
 		
 	return allgamestr
 
