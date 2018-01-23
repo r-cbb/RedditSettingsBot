@@ -1,25 +1,25 @@
-#1|[](#f/villanova)|Villanova (73)|1921
-#2|[](#f/virginia)|Virginia (4)|1811
-#3|[](#f/purdue)|Purdue |1673
-#4|[](#f/westvirginia)|West Virginia |1600
-#5|[](#f/duke)|Duke |1586
-#6|[](#f/oklahoma)|Oklahoma |1536
-#7|[](#f/texastech)|Texas Tech |1526
-#8|[](#f/wichitastate)|Wichita State |1412
-#9|[](#f/michiganstate)|Michigan State |1238
-#10|[](#f/kansas)|Kansas |1211
-#11|[](#f/xavier)|Xavier |1104
-#12|[](#f/cincinnati)|Cincinnati |1035
-#13|[](#f/gonzaga)|Gonzaga |874
-#14|[](#f/arizona)|Arizona |822
-#15|[](#f/auburn)|Auburn |777
-#16|[](#f/northcarolina)|North Carolina |748
-#17|[](#f/arizonastate)|Arizona State |697
-#18|[](#f/clemson)|Clemson |610
-#19|[](#f/setonhall)|Seton Hall |597
-#20|[](#f/kentucky)|Kentucky |527
-#21|[](#f/tennessee)|Tennessee |433
-#22|[](#f/ohiostate)|Ohio State |307
-#23|[](#f/tcu)|TCU |246
-#24|[](#f/michigan)|Michigan |220
-#25|[](#f/miami)|Miami (FL) |181
+#1|[](#f/villanova)|Villanova (73)|1920
+#2|[](#f/virginia)|Virginia (2)|1822
+#3|[](#f/purdue)|Purdue (2)|1765
+#4|[](#f/duke)|Duke |1709
+#5|[](#f/kansas)|Kansas |1561
+#6|[](#f/westvirginia)|West Virginia |1452
+#7|[](#f/michiganstate)|Michigan State |1427
+#8|[](#f/xavier)|Xavier |1398
+#9|[](#f/cincinnati)|Cincinnati |1277
+#10|[](#f/northcarolina)|North Carolina |1180
+#11|[](#f/arizona)|Arizona |1085
+#12|[](#f/oklahoma)|Oklahoma |1034
+#13|[](#f/texastech)|Texas Tech |987
+#14|[](#f/ohiostate)|Ohio State |867
+#15|[](#f/auburn)|Auburn |743
+#16|[](#f/clemson)|Clemson |687
+#17|[](#f/gonzaga)|Gonzaga |653
+#18|[](#f/wichitastate)|Wichita State |612
+#19|[](#f/stmarys)|St. Mary's |487
+#20|[](#f/arizonastate)|Arizona State |401
+#21|[](#f/tennessee)|Tennessee |341
+#22|[](#f/nevada)|Nevada |292
+#23|[](#f/florida)|Florida |278
+#24|[](#f/rhodeisland)|URI |218
+#25|[](#f/setonhall)|Seton Hall |129

@@ -30,6 +30,8 @@ def get_rcbb_poll():
 		if "<td><span class='team-name'>" in line:
 			# Rank
 			team_rank=lines[lines.index(line)-1].replace('<td>','').replace('</td>','')
+			# Votes
+			team_vote=lines[lines.index(line)+1].replace('<td>','').replace('</td>','')
 			# Team, FPV
 			line=line.replace('&#39;',"'").replace('&#38;','&')
 			begin=line.find('></span>')
@@ -42,9 +44,6 @@ def get_rcbb_poll():
 					break
 			else:
 				team_fpv=''
-				
-			# Votes
-			team_vote=lines[lines.index(line)+1].replace('<td>','').replace('</td>','')
 			
 			ranking.append("#"+str(int(team_rank))+"|"+flairs[rank_names[team.replace('&amp;','&')]]+"|"+team.replace('&amp;','&')+" "+team_fpv+"|"+str(int(team_vote)))
 			
