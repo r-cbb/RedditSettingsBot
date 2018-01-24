@@ -49,17 +49,17 @@ def get_rcbb_poll():
 			
 			headerranking.append(flairs[rank_names[team.replace('&amp;','&')]])
 			
-		# os.remove('cbbscorebot/ranking.html')
-		with open('cbbscorebot/ranking.txt','w') as f:
-			for team in ranking:
-				f.write(team+'\n')
+	# os.remove('cbbscorebot/ranking.html')
+	with open('cbbscorebot/ranking.txt','w') as f:
+		for team in ranking:
+			f.write(team+'\n')
 		
-		with open('cbbscorebot/headerranking.txt','w') as f:
-			for team in headerranking:
-				if team == headerranking[-1]:
-					f.write(team)
-				else:
-					f.write(team+' ')
+	with open('cbbscorebot/headerranking.txt','w') as f:
+		for team in headerranking:
+			if team == headerranking[-1]:
+				f.write(team)
+			else:
+				f.write(team+' ')
 
 try:
 	get_rcbb_poll()
