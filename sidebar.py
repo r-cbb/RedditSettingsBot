@@ -38,7 +38,7 @@ def get_gamethreads(r):
 		# botposttime = {}
 		
 		for submission in submissions:
-			link = submission.permalink
+			link = submission.shortlink
 			title = submission.title
 			time_created = submission.created_utc
 			
@@ -117,6 +117,7 @@ def updateschedule(r):
 	
 	allgamestr = ''
 	top25gamestr = ''
+	hasgamethreadstr = ''
 	restgamestr = ''
 	
 	(teams,rank_names)=get_teams()
@@ -126,6 +127,7 @@ def updateschedule(r):
 	for event in scoreData['events']:
 		team1in25 = False
 		team2in25 = False
+		hasgamethread = False
 		
 		game = dict()
 
@@ -253,19 +255,28 @@ def updateschedule(r):
 			# if team2 == awaykey[:-1] and team1 == homekey[0:len(team1)] and homekey[len(team1)-1:].startswith('('):
 			if team2 == awaykey[:-1] and team1 == homekey[0:len(team1)]:
 				gamestring += "[" + str(score1) + "-" + str(score2) + "](" + url[key] + ")"
+				hasgamethread = True
 				break
 		else:
 			gamestring += str(score1) + "-" + str(score2)
 		
 		if team1in25 == True or team2in25 == True:
 			top25gamestr += gamestring + '\n'
+		elif hasgamethread == True:
+			hasgamethreadstr += gamestring + '\n'
+			restgamestr += gamestring + '\n'
 		else:
 			restgamestr += gamestring + '\n'
 		
-		if top25gamestr != '':
-			allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr + "---- | **All** | **Games** | ---- | ---- \n" + restgamestr
-		else:
-			allgamestr = restgamestr
+	if top25gamestr != '':
+		allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr + "---- | **All** | **Games** | ---- | ---- \n" + restgamestr
+	else:
+		allgamestr = restgamestr
+	
+	if len(allgamestr)-len([m.start() for m in re.finditer('\n',allgamestr)]) > 6250:
+		allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr + "---- | **Has** | **Game** | **Thread** | ---- \n" + hasgamethreadstr
+		if len(allgamestr)-len([m.start() for m in re.finditer('\n',allgamestr)]) > 6250:
+			allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr
 		
 	return allgamestr
 

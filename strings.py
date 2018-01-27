@@ -1,14 +1,14 @@
 PreTop25 = """ | | | | | | | | | |
 ---|---|----|----|----|----|----|----|----|----
-[](https://www.reddit.com/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](https://www.reddit.com/r/cbbprivateflairtest) | [](https://www.reddit.com/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](https://www.reddit.com/r/cbbprivateflairtest)
-[](https://www.reddit.com/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](https://www.reddit.com/r/cbbprivateflairtest) | [](https://www.reddit.com/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](https://www.reddit.com/r/cbbprivateflairtest)
-[](https://www.reddit.com/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](https://www.reddit.com/r/cbbprivateflairtest) | [](https://www.reddit.com/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](https://www.reddit.com/r/cbbprivateflairtest)
+[](/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](/r/cbbprivateflairtest) | [](/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](/r/cbbprivateflairtest)
+[](/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](/r/cbbprivateflairtest) | [](/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](/r/cbbprivateflairtest)
+[](/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](/r/cbbprivateflairtest) | [](/r/cbbprivateflairtest) | | [](https://www.reddit.com) | | [](/r/cbbprivateflairtest)
 
 #### 
 
 ###[Select Flair](/r/cbbprivateflairtest/wiki/flair)
-###[Subreddit Rules](https://www.reddit.com/r/cbbprivateflairtest/wiki/rules_guidelines)
-###[Create a Game Thread](https://www.reddit.com/r/cbbprivateflairtest/comments/5o5at9/introducing_ucbbbot_an_easier_way_of_making_game/)
+###[Subreddit Rules](/r/cbbprivateflairtest/wiki/rules_guidelines)
+###[Create a Game Thread](/r/cbbprivateflairtest/comments/5o5at9/introducing_ucbbbot_an_easier_way_of_making_game/)
 ###[Join us on Discord](https://discord.gg/74Bswry)
 | | | | |
 :--:|:--:|:---|:---
@@ -34,16 +34,16 @@ PostTop25Header = """
 
 #**Subreddit Tools**
 
-[/r/CollegeBasketball wiki](https://www.reddit.com/r/CollegeBasketball/wiki/index)    
-[Subreddit Rules](https://www.reddit.com/r/CollegeBasketball/wiki/rules_guidelines)  
-[Inline Flair](https://www.reddit.com/r/CollegeBasketball/wiki/inlineflair)  
+[/r/CollegeBasketball wiki](/r/CollegeBasketball/wiki/index)    
+[Subreddit Rules](/r/CollegeBasketball/wiki/rules_guidelines)  
+[Inline Flair](/r/CollegeBasketball/wiki/inlineflair)  
 
 #**Archives**
 
-[AMA Archive](http://www.reddit.com/r/collegebasketball/search?q=flair%3A%27ama%27&sort=new&restrict_sr=on)  
-[Game Thread Archive](https://www.reddit.com/r/CollegeBasketball/search?q=flair%3A%27game+thread%27&restrict_sr=on&sort=new&t=all)  
-[Trash Talk Archive](https://www.reddit.com/r/CollegeBasketball/search?q=flair%3A%27trash+talk%27&restrict_sr=on&sort=new&t=all)  
-[Announcements Archive](http://www.reddit.com/r/collegebasketball/search?q=flair%3A%27modpost%27&sort=new&restrict_sr=on)  
+[AMA Archive](/r/collegebasketball/search?q=flair%3A%27ama%27&sort=new&restrict_sr=on)  
+[Game Thread Archive](/r/CollegeBasketball/search?q=flair%3A%27game+thread%27&restrict_sr=on&sort=new&t=all)  
+[Trash Talk Archive](/r/CollegeBasketball/search?q=flair%3A%27trash+talk%27&restrict_sr=on&sort=new&t=all)  
+[Announcements Archive](/r/collegebasketball/search?q=flair%3A%27modpost%27&sort=new&restrict_sr=on)  
 
 #**Other**
 
@@ -53,7 +53,7 @@ PostTop25Header = """
 
 
 ##Related Subreddits##
-#[Specific Schools/Conferences](http://www.reddit.com/r/CollegeBasketball/wiki/relatedsubreddits)
+#[Specific Schools/Conferences](/r/CollegeBasketball/wiki/relatedsubreddits)
 #/r/ncaaBballstreams  
 #/r/sports  
 #/r/nba  

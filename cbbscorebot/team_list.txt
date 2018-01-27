@@ -106,7 +106,7 @@ Green Bay,[](#f/greenbay),Green Bay
 Hampton,[](#f/hampton),Hampton
 Hartford,[](#f/hartford),Hartford
 Harvard,[](#f/harvard),Harvard
-Hawai'i,[](#f/hawaii),Hawaii
+Hawaii,[](#f/hawaii),Hawaii
 High Point,[](#f/highpoint),High Point
 Hofstra,[](#f/hofstra),Hofstra
 Holy Cross,[](#f/holycross),Holy Cross
@@ -126,7 +126,7 @@ Iowa State,[](#f/iowastate),Iowa State
 IUPUI,[](#f/iupui),IUPUI
 Jackson State,[](#f/jacksonstate),Jackson State
 Jacksonville,[](#f/jacksonville),Jacksonville
-Jacksonville St,[](#f/jacksonvillestate),Jacksonville State
+Jacksonville State,[](#f/jacksonvillestate),Jacksonville State
 James Madison,[](#f/jamesmadison),James Madison
 Kansas,[](#f/kansas),Kansas
 Kansas State,[](#f/kansasstate),Kansas State
@@ -175,10 +175,10 @@ Missouri State,[](#f/missouristate),Missouri State
 Monmouth,[](#f/monmouth),Monmouth
 Montana,[](#f/montana),Montana
 Montana State,[](#f/montanastate),Montana State
-Morehead St,[](#f/moreheadstate),Morehead State
+Morehead State,[](#f/moreheadstate),Morehead State
 Morgan State,[](#f/morganstate),Morgan State
 Mt. St. Mary's,[](#f/mountstmarys),Mt. St. Mary's
-Murray St,[](#f/murraystate),Murray State
+Murray State,[](#f/murraystate),Murray State
 Navy,[](#f/navy),Navy
 NC State,[](#f/ncstate),NC State
 Nebraska,[](#f/nebraska),Nebraska
@@ -195,7 +195,7 @@ North Carolina,[](#f/northcarolina),North Carolina
 North Carolina A&T,[](#f/northcarolinaat),NC A&T
 North Carolina Central,[](#f/nccentral),NC Central
 North Dakota,[](#f/northdakota),North Dakota
-North Dakota St,[](#f/northdakotastate),North Dakota State
+North Dakota State,[](#f/northdakotastate),North Dakota State
 North Florida,[](#f/northflorida),North Florida
 North Texas,[](#f/northtexas),North Texas
 Northeastern,[](#f/northeastern),Northeastern
@@ -283,7 +283,7 @@ TCU,[](#f/tcu),TCU
 Temple,[](#f/temple),Temple
 Tenn-Martin,[](#f/tennesseemartin),Tennessee-Martin
 Tennessee,[](#f/tennessee),Tennessee
-Tennessee St,[](#f/tennesseestate),Tennessee State
+Tennessee State,[](#f/tennesseestate),Tennessee State
 Tennessee Tech,[](#f/tennesseetech),Tennessee Tech
 Texas,[](#f/texas),Texas
 Texas A&M,[](#f/texasam),Texas A&M
