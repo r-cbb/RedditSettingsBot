@@ -246,14 +246,16 @@ def updateschedule(r):
 			# print("AwayKey:"+awaykey[:-1]+". Away:"+team2+".")
 			# print()
 			
-			# print("HomeKey:" + homekey[0:len(team1)]+". Home:" + team1+". "+homekey[len(team2)-1:])
+			# print("HomeKey:" + homekey[0:len(team1)]+". Home:" + team1+". "+homekey[len(team1)-1:])
 			# print()
 			# print(homekey[len(team2)-1:])
 			
 			# time.sleep(0.1)
 			
 			# if team2 == awaykey[:-1] and team1 == homekey[0:len(team1)] and homekey[len(team1)-1:].startswith('('):
-			if team2 == awaykey[:-1] and team1 == homekey[0:len(team1)]:
+			if team2 == awaykey[:-1] and team1 == homekey[0:len(team1)] and len(homekey[len(team1):]) <= 14:
+				# print("AwayKey:"+awaykey[:-1]+". Away:"+team2+".")
+				# print("HomeKey:" + homekey[0:len(team1)]+". Home:" + team1+". Rest of Key: "+homekey[len(team1):])
 				gamestring += "[" + str(score1) + "-" + str(score2) + "](" + url[key] + ")"
 				hasgamethread = True
 				break
@@ -283,7 +285,8 @@ def updateschedule(r):
 def updatesidebar():
 	r = scriptlogin()
 	
-	sidebarstring = strings.PreTop25 + getrankings() + strings.BetweenTop25andSchedule + updateschedule(r) + getheaderrankings() + strings.PostTop25Header
+	# sidebarstring = strings.PreTop25 + getrankings() + strings.BetweenTop25andSchedule + updateschedule(r) + getheaderrankings() + strings.PostTop25Header
+	sidebarstring = strings.PreTop25 + getrankings() + strings.BetweenTop25andSchedule + updateschedule(r) + "#### 200,000 Subscribers! \n" + strings.PostTop25Header
 	
 	settings=r.subreddit('cbbprivateflairtest').mod.settings()
 	
