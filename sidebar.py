@@ -4,7 +4,6 @@ import json
 import time
 import html
 import re
-import strings
 import reddit_login
 
 def scriptlogin():
@@ -92,9 +91,34 @@ def getheaderrankingslist():
 	except:
 		print("Failed to Create a list of ranked flairs")
 		raise
-				
+		
+def createconfigfile(r):
+	try:
+		wikipage = r.subreddit('collegebasketball').wiki['config_scorebot']
+	
+		with open('scorebot_config.py','w',newline='') as out_file:
+			for line in wikipage.content_md:
+				out_file.write(line)
+	except:
+		print("Failed to read wiki")
+		raise
+		
+def setteamflair(team, teams, teamranking, teamflag):
+	teamflair = ''
+	if team in teams.keys():
+		teamflair = teams[team]
+	else:
+		teamflair = "Non D1"
+	
+	if teamflair in teamranking.keys():
+		teamflair = "^#"+str(teamranking[teamflair])+' '+teamflair
+		teamflag = True
+		
+	return teamflair, teamflag
+			
 def updateschedule(r):
-
+	import scorebot_config
+	
 	MODE_ACTIVE = 0
 	MODE_INACTIVE = 1
 	GAME_STATUS_PRE = 0
@@ -174,44 +198,29 @@ def updateschedule(r):
 		else:
 			gametime = game['time']
 		
-		if team1 in teams.keys():
-			team1flair = teams[team1]
-		else:
-			team1flair = "Non D1"
-			# team1flair = team1
-				
-		if team1flair in teamranking.keys():
-			team1flair = "^#"+str(teamranking[team1flair])+' '+team1flair
-			team1in25 = True
-			
-		if team2 in teams.keys():
-			team2flair = teams[team2]
-		else:
-			team2flair = "Non D1"
-			# team2flair = team2
+		# If the team has a flair or is ranked, set the variables as such.		
+		team1flair, team1in25 = setteamflair(team1, teams, teamranking, team1in25)
+		team2flair, team2in25 = setteamflair(team2, teams, teamranking, team2in25)
 		
-		if team2flair in teamranking.keys():
-			team2flair = "^#"+str(teamranking[team2flair])+' '+team2flair
-			team2in25 = True
-		
+		# Start of the schedule line for each game.
 		gamestring = gametime + " | " + team1flair + " | " + team2flair + " | "
 
+		# Adds the network if it is being played on one.  Empty cell otherwise.
 		try:
 			game['network'] = event['competitions'][0]['broadcasts'][0]['names'][0]
 			
-			if game['network'] in strings.tv_flairs.keys():
-				networkstring=strings.tv_flairs[game['network']]
+			if game['network'] in scorebot_config.tv_flairs.keys():
+				networkstring=scorebot_config.tv_flairs[game['network']]
 			else:
 				networkstring=game['network']
 			
 			gamestring += networkstring + " | "
 			
-			# gamestring += game['network'] + " | "
-			
 		except:
 			gamestring += " | "
 
 		
+		# Scraping the game threads for the most recent ones.
 		for key in url.keys():
 			(awaykey,homekey)=str(key).replace('[Game Thread] ','').split('@')
 			
@@ -249,11 +258,9 @@ def updateschedule(r):
 			# print("HomeKey:" + homekey[0:len(team1)]+". Home:" + team1+". "+homekey[len(team1)-1:])
 			# print()
 			# print(homekey[len(team2)-1:])
-			
-			# time.sleep(0.1)
-			
-			# if team2 == awaykey[:-1] and team1 == homekey[0:len(team1)] and homekey[len(team1)-1:].startswith('('):
-			if team2 == awaykey[:-1] and team1 == homekey[0:len(team1)] and len(homekey[len(team1):]) <= 14:
+						
+			# 14 is the maximum value of the game time in title.
+			if team2 == awaykey[:-1] and team1 == homekey[0:len(team1)] and len(homekey[len(team1):]) <= 14: 
 				# print("AwayKey:"+awaykey[:-1]+". Away:"+team2+".")
 				# print("HomeKey:" + homekey[0:len(team1)]+". Home:" + team1+". Rest of Key: "+homekey[len(team1):])
 				gamestring += "[" + str(score1) + "-" + str(score2) + "](" + url[key] + ")"
@@ -269,36 +276,43 @@ def updateschedule(r):
 			restgamestr += gamestring + '\n'
 		else:
 			restgamestr += gamestring + '\n'
-		
+	
+	# If there is a ranked game, use this.
 	if top25gamestr != '':
 		allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr + "---- | **All** | **Games** | ---- | ---- \n" + restgamestr
+	elif top25gamestr != '' and restgamestr == '':
+		allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr
 	else:
 		allgamestr = restgamestr
 	
-	if len(allgamestr)-len([m.start() for m in re.finditer('\n',allgamestr)]) > 6250:
+	if len(allgamestr)-len([m.start() for m in re.finditer('\n',allgamestr)]) > scorebot_config.maxlength:
 		allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr + "---- | **Has** | **Game** | **Thread** | ---- \n" + hasgamethreadstr
-		if len(allgamestr)-len([m.start() for m in re.finditer('\n',allgamestr)]) > 6250:
+		if len(allgamestr)-len([m.start() for m in re.finditer('\n',allgamestr)]) > scorebot_config.maxlength:
 			allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr
 		
 	return allgamestr
 
 def updatesidebar():
 	r = scriptlogin()
+	createconfigfile(r)
+	import scorebot_config
 	
-	# sidebarstring = strings.PreTop25 + getrankings() + strings.BetweenTop25andSchedule + updateschedule(r) + getheaderrankings() + strings.PostTop25Header
-	sidebarstring = strings.PreTop25 + getrankings() + strings.BetweenTop25andSchedule + updateschedule(r) + "#### 200,000 Subscribers! \n" + strings.PostTop25Header
+	if scorebot_config.top25barflag == 0:
+		sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + updateschedule(r) + getheaderrankings() + scorebot_config.PostTop25Header
+	else:
+		sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + updateschedule(r) +  scorebot_config.top25customstring + scorebot_config.PostTop25Header
 	
-	settings=r.subreddit('cbbprivateflairtest').mod.settings()
+	settings=r.subreddit('collegebasketball').mod.settings()
 	
 	if sidebarstring != settings["description"]:
 		print('Does Not Equal, Resetting')
-		r.subreddit('cbbprivateflairtest').mod.update(description=sidebarstring)
+		r.subreddit('collegebasketball').mod.update(description=sidebarstring)
 	else:
 		print('Doing Nothing, As they are the same')
 	
 try:
 	updatesidebar()
 except:
-	print('Failed to Update Sidebar')
-	quit()
+ 	print('Failed to Update Sidebar')
+ 	quit()
 quit()

@@ -1,3 +1,4 @@
+# This includes everything before the top 25 on the sidebar.
 PreTop25 = """ | | | | | | | | | |
 ---|---|----|----|----|----|----|----|----|----
 [](/r/collegebasketball) | | [](https://www.reddit.com) | | [](/r/collegebasketball) | [](/r/collegebasketball) | | [](https://www.reddit.com) | | [](/r/collegebasketball)
@@ -15,6 +16,7 @@ PreTop25 = """ | | | | | | | | | |
 [User Poll](http://cbbpoll.com/)|
 Rank||Team (FPV)|Score"""
 
+# This is just a writer for the Sidebar Schedule.
 BetweenTop25andSchedule = """
 
 | | | | | |
@@ -23,6 +25,7 @@ Game Schedule|
 Time (EsT) | Home | Away | TV | Score
 """
 
+# This includes everything post Schedule.
 PostTop25Header = """
 ##Resources##
   
@@ -67,4 +70,12 @@ PostTop25Header = """
 #/r/ea2kcbb  
 #/r/HSbball"""
 
+# All Media flairs can be found here.
 tv_flairs={'BTN':'[](#l/btn)','CBS':'[](#l/cbs)','CBSSN':'[](#l/cbssn)','ESPN':'[](#l/espn)','ESPN2':'[](#l/espn2)','ESPN3':'[](#l/espn3)','ESPNU':'[](#l/espnu)','ESPNN':'[](#l/espnews)','FOX':'[](#l/fox)','FS1':'[](#l/fs1)','FS2':'[](#l/fs2)','FSN':'[](#l/fsn)','Longhorn Network':'[](#l/lhn)','NBC':'[](#l/nbc)','NBCSN':'[](#l/nbcsn)','PAC12':'[](#l/p12n)','SECN':'[](#l/secn)','SECN+':'[](#l/secn)','TBS':'[](#l/tbs)','TNT':'[](#l/tnt)','truTV':'[](#l/trutv)','ACCNE':'[](#l/accne)'}
+
+# Custom Top 25 Bar strings here.
+top25barflag = 1 # 0 uses top 25 scraped from cbbpoll.com, 1 uses top25customstring below
+top25customstring = "#### [](#f/murraystate) [](#f/radford) [](#f/loyolachicago) [](#f/lipscomb) [](#f/michigan) [](#f/iona) [](#f/uncgreensboro) [](#l/caa) [](#l/horizon) [](#l/nec) [](#l/summit) [](#l/wcc) [](#l/patriot) [](#l/bigwest) [](#l/americaeast) [](#l/meac) [](#l/swac) [](#l/big12) [](#l/mwc) [](#l/bigeast) [](#l/mac) [](#l/bigsky) [](#l/acc) [](#l/cusa) [](#l/southland) [](#l/pac12) [](#l/wac) [](#l/ivy) [](#l/atlantic10) [](#l/sec) [](#l/sunbelt) [](#l/aac)  \n"
+
+#Change the max length of the schedule.  6250 leaves ~50 characters for use.  
+maxlength = 6250

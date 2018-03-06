@@ -52,7 +52,7 @@ Colgate,[](#f/colgate),Colgate
 Colorado,[](#f/colorado),Colorado
 Colorado State,[](#f/coloradostate),Colorado State
 Columbia,[](#f/columbia),Columbia
-Connecticut,[](#f/connecticut),UConn
+UConn,[](#f/connecticut),UConn
 Coppin State,[](#f/coppinstate),Coppin State
 Cornell,[](#f/cornell),Cornell
 Creighton,[](#f/creighton),Creighton
