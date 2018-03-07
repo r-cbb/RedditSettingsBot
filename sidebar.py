@@ -312,7 +312,8 @@ def updatesidebar():
 	
 try:
 	updatesidebar()
-except:
- 	print('Failed to Update Sidebar')
- 	quit()
+except Exception as e:
+	print(e)
+	print('Failed to Update Sidebar')
+	quit()
 quit()
