@@ -148,7 +148,7 @@ Louisiana Tech,[](#f/louisianatech),Louisiana Tech
 Louisville,[](#f/louisville),Louisville
 Loyola (MD),[](#f/loyolamaryland),Loyola-MD
 Loyola Marymount,[](#f/loyolamarymount),Loyola Marymount
-Loyola-Chicago,[](#f/loyolachicago),Loyola Chicago
+Loyola (Chi),[](#f/loyolachicago),Loyola Chicago
 LSU,[](#f/lsu),LSU
 Maine,[](#f/maine),Maine
 Manhattan,[](#f/manhattan),Manhattan

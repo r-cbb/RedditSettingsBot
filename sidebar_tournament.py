@@ -34,6 +34,7 @@ def get_gamethreads(r):
 		submissions = r.redditor('cbbbot').submissions.new()
 		
 		url = {}
+		# botposttime = {}
 		
 		for submission in submissions:
 			link = submission.shortlink
@@ -41,8 +42,8 @@ def get_gamethreads(r):
 			time_created = submission.created_utc
 			
 			url[title]=link
-			
-		return url
+			# botposttime[url]=time_created
+		return url # ,botposttime
 	except:
 		print("Failed to Grab cbbbot Submissions")
 		raise
@@ -73,15 +74,21 @@ def getheaderrankings():
 	
 def getheaderrankingslist():
 	try:
-		with open('cbbscorebot/headerranking.txt','r') as imp_file:
+		# with open('cbbscorebot/headerranking.txt','r') as imp_file:
+		with open('cbbscorebot/headerranking_tournament.txt','r') as imp_file:
 			lines=imp_file.readlines()
 		flairs = lines[0].split(' ')
 		ranking = []
-		i = 1
-		while i<26:
-			ranking.append(str(i))
-			i=i+1
-
+		# i = 1
+		# while i<26:
+			# ranking.append(str(i))
+			# i=i+1
+		for i in range(1,17):
+			for n in range(1,5):
+				ranking.append(str(i))
+			if i == 11 or i == 16:
+				ranking.append(str(i))
+				ranking.append(str(i))
 		n = 0
 		rankings={}
 		for flair in flairs:
@@ -108,6 +115,7 @@ def setteamflair(team, teams, teamranking, teamflag):
 	if team in teams.keys():
 		teamflair = teams[team]
 	else:
+		print(team)
 		teamflair = "Non D1"
 	
 	if teamflair in teamranking.keys():
@@ -116,7 +124,7 @@ def setteamflair(team, teams, teamranking, teamflag):
 		
 	return teamflair, teamflag
 			
-def updateschedule(r):
+def updateschedule(r,espnaddress):
 	import scorebot_config
 	
 	MODE_ACTIVE = 0
@@ -126,7 +134,8 @@ def updateschedule(r):
 	GAME_STATUS_POST = 2
 	
 	try:
-		req = Request("http://www.espn.com/mens-college-basketball/scoreboard/_/group/50/?t=" + str(time.time()))
+		# req = Request("http://www.espn.com/mens-college-basketball/scoreboard/_/group/50/?t=" + str(time.time()))
+		req = Request(espnaddress + str(time.time()))
 		req.headers["User-Agent"] = UserAgent(verify_ssl=False).chrome
 	except:
 		print("Failed to Pull ESPN json file")
@@ -294,25 +303,45 @@ def updateschedule(r):
 		
 	return allgamestr
 
-#Off Season Time to Season Counter
-def timetoseason():
-	from datetime import datetime
-	seasonstartdate = datetime(2018,11,6) #This should be manually changed every year.
-	numofdays = abs(seasonstartdate - datetime.now()).days
-	returnstring = "#### " + str(numofdays) + " Days Until Tipoff"
-	return returnstring
-
 def updatesidebar():
 	r = scriptlogin()
 	createconfigfile(r)
 	import scorebot_config
 	
+	ncaa = "http://www.espn.com/mens-college-basketball/scoreboard/_/group/100/?t="
+	nit = "http://www.espn.com/mens-college-basketball/scoreboard/_/group/50/?t="
+	cbi = "http://www.espn.com/mens-college-basketball/scoreboard/_/group/55/?t="
+	cit = "http://www.espn.com/mens-college-basketball/scoreboard/_/group/56/?t="
+	
+	try:
+		ncaa_schedule = " [](#l/marchmadness) | --- | --- | ---- | ----  \n" +updateschedule(r,ncaa)
+	except Exception as e:
+		print("NCAA Schedule: " + str(e))
+		ncaa_schedule = ""
+		
+	try:
+		nit_schedule = " [](#l/nit) | --- | ---- | ---- | ----  \n" + updateschedule(r,nit)
+	except Exception as e:
+		print("NIT Schedule: " + str(e))
+		nit_schedule = ""
+		
+	try:
+		cbi_schedule = " [](#l/cbi) | --- | ---- | ---- | ----  \n" +updateschedule(r,cbi)
+	except Exception as e:
+		print("CBI Schedule: " + str(e))
+		cbi_schedule = ""
+		
+	try:
+		cit_schedule = " [](#l/cit) | --- | ---- | ---- | ----  \n" +updateschedule(r,cit)
+	except Exception as e:
+		print("CIT Schedule: " + str(e))
+		cit_schedule = ""
+	
 	if scorebot_config.top25barflag == 0:
-		sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + updateschedule(r) + getheaderrankings() + scorebot_config.PostTop25Header
-	elif scorebot_config.top25barflag == 1:
-		sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + updateschedule(r) +  timetoseason() + scorebot_config.PostTop25Header
+		# sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + " [](#l/marchmadness) | --- | --- | ---- | ----  \n" +updateschedule(r,ncaa) + " [](#l/nit) | --- | ---- | ---- | ----  \n" + updateschedule(r,nit) + " [](#l/cbi) | --- | ---- | ---- | ----  \n" +updateschedule(r,cbi) + " [](#l/cit) | --- | ---- | ---- | ----  \n" +updateschedule(r,cit) + getheaderrankings() + scorebot_config.PostTop25Header
+		sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + ncaa_schedule + nit_schedule + cbi_schedule + cit_schedule + getheaderrankings() + scorebot_config.PostTop25Header
 	else:
-		sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + updateschedule(r) +  scorebot_config.top25customstring + scorebot_config.PostTop25Header
+		sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + ncaa_schedule + nit_schedule + cbi_schedule + cit_schedule + scorebot_config.top25customstring + scorebot_config.PostTop25Header
 	
 	settings=r.subreddit('collegebasketball').mod.settings()
 	
@@ -322,10 +351,10 @@ def updatesidebar():
 	else:
 		print('Doing Nothing, As they are the same')
 	
-try:
-	updatesidebar()
-except Exception as e:
-	print(e)
-	print('Failed to Update Sidebar')
-	quit()
+# try:
+updatesidebar()
+# except Exception as e:
+	# print(e)
+	# print('Failed to Update Sidebar')
+	# quit()
 quit()
