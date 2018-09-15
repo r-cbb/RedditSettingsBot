@@ -123,6 +123,24 @@ def setteamflair(team, teams, teamranking, teamflag):
 		
 	return teamflair, teamflag
 
+def pulljson():
+	try:
+		req = Request("http://www.espn.com/mens-college-basketball/scoreboard/_/group/50/?t=" + str(time.time()))
+		req.headers["User-Agent"] = UserAgent(verify_ssl=False).chrome
+	except:
+		print("Failed to Pull ESPN json file")
+		raise
+	
+	return req
+
+def loaddata(req):
+	# Load data
+	scoreData = urlopen(req).read().decode("utf-8")
+	scoreData = scoreData[scoreData.find('window.espn.scoreboardData 	= ')+len('window.espn.scoreboardData 	= '):]
+	scoreData = json.loads(scoreData[:scoreData.find('};')+1])
+	
+	return scoreData
+
 def parsevent(event):
 	game = dict()
 	
@@ -159,6 +177,7 @@ def parsevent(event):
 	if homestatus == 'home':
 		game['hometeam'], game['homeid'], game['homeabv'], game['homescore'], game['awayteam'], game['awayid'], game['awayabv'], game['awayscore'] =\
 			team1, tid1, team1abv, score1, team2, tid2, team2abv, score2
+			
 	else:
 		game['hometeam'], game['homeid'], game['homeabv'], game['homescore'], game['awayteam'], game['awayid'], game['awayabv'], game['awayscore'] = \
 			team2, tid2, team2abv, score2, team1, tid1, team1abv, score1
@@ -171,29 +190,54 @@ def parsevent(event):
 		game['network'] = 'unavailable'
 		
 	return game
+
+def setgametime(game):
+	if game['status'] == GAME_STATUS_PRE:
+		if game['time'] == "TBD":
+			gametime = "TBD"
+		else:
+			searchedstring = re.search(' - (.*) EST',game['time'])
+			if searchedstring is None:
+				searchedstring = re.search(' - (.*) EDT',game['time'])
+			gametime = searchedstring.group(1)
+	elif game['status'] == GAME_STATUS_IN and game['time'] != "Halftime" and game['time'] != "Delayed" and game['time'] != "End of 2nd":
+		gametime = game['time'].replace(" - "," (") + ")"
+	else:
+		gametime = game['time']
+		
+	return gametime
+
+def setnetwork(game,gamestring):
+	try:	
+		if game['network'] == 'unavailable':
+			gamestring += " | "
+		else:
+			if game['network'] in scorebot_config.tv_flairs.keys():
+				networkstring=scorebot_config.tv_flairs[game['network']]
+			else:
+				networkstring=game['network']
+		
+			gamestring += networkstring + " | "
+		
+	except:
+		gamestring += " | "
+		
+	return gamestring
 	
 def updateschedule(r):
 	import scorebot_config
 
-	try:
-		req = Request("http://www.espn.com/mens-college-basketball/scoreboard/_/group/50/?t=" + str(time.time()))
-		req.headers["User-Agent"] = UserAgent(verify_ssl=False).chrome
-	except:
-		print("Failed to Pull ESPN json file")
-		raise
-
-	# Load data
-	scoreData = urlopen(req).read().decode("utf-8")
-	scoreData = scoreData[scoreData.find('window.espn.scoreboardData 	= ')+len('window.espn.scoreboardData 	= '):]
-	scoreData = json.loads(scoreData[:scoreData.find('};')+1])
-
-	games = dict()
+	#Scrape and Load Data from ESPN
+	req = pulljson()
+	scoreData = loaddata(req)
 	
+	#Initilize Strings
 	allgamestr = ''
 	top25gamestr = ''
 	hasgamethreadstr = ''
 	restgamestr = ''
 	
+	#Load Teams, Rankings, Gamethreads
 	(teams,rank_names)=get_teams()
 	url=get_gamethreads(r)
 	teamranking = getheaderrankingslist()
@@ -205,21 +249,7 @@ def updateschedule(r):
 		
 		game = parsevent(event)
 		
-		# print(team1 + ", " + str(tid1) + ", " + team1abv + ", " + str(score1) + ", " + str(team2) + ", " + str(tid2) + ", " + str(team2abv) + ", " + str(score2))
-		# print(game['time'])
-		
-		if game['status'] == GAME_STATUS_PRE:
-			if game['time'] == "TBD":
-				gametime = "TBD"
-			else:
-				searchedstring = re.search(' - (.*) EST',game['time'])
-				if searchedstring is None:
-					searchedstring = re.search(' - (.*) EDT',game['time'])
-				gametime = searchedstring.group(1)
-		elif game['status'] == GAME_STATUS_IN and game['time'] != "Halftime" and game['time'] != "Delayed" and game['time'] != "End of 2nd":
-			gametime = game['time'].replace(" - "," (") + ")"
-		else:
-			gametime = game['time']
+		gametime = setgametime(game)
 		
 		# If the team has a flair or is ranked, set the variables as such.		
 		hometeamflair, hometeamin25 = setteamflair(game['hometeam'], teams, teamranking, hometeamin25)
@@ -229,20 +259,7 @@ def updateschedule(r):
 		gamestring = gametime + " | " + hometeamflair + " | " + awayteamflair + " | "
 
 		# Adds the network if it is being played on one.  Empty cell otherwise.
-		try:	
-			if game['network'] == 'unavailable':
-				gamestring += " | "
-			else:
-				if game['network'] in scorebot_config.tv_flairs.keys():
-					networkstring=scorebot_config.tv_flairs[game['network']]
-				else:
-					networkstring=game['network']
-			
-				gamestring += networkstring + " | "
-			
-		except:
-			gamestring += " | "
-
+		gamestring = setnetwork(game,gamestring)
 		
 		# Scraping the game threads for the most recent ones.
 		for key in url.keys():
