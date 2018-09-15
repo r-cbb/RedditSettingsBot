@@ -1,7 +1,4 @@
 
 credentials.py
-__pycache__/credentials.cpython-35.pyc
-__pycache__/reddit_login.cpython-35.pyc
-__pycache__/strings.cpython-35.pyc
-__pycache__/sidebar.cpython-35.pyc
-__pycache__/top25update.cpython-35.pyc
+__pycache__/
+log.txt

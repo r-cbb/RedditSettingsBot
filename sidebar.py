@@ -190,11 +190,17 @@ def updateschedule(r):
 
 		game['time'] = event['status']['type']['shortDetail']
 		
+		print(team1 + ", " + str(tid1) + ", " + team1abv + ", " + str(score1) + ", " + str(team2) + ", " + str(tid2) + ", " + str(team2abv) + ", " + str(score2))
+		print(game['time'])
+		
 		if game['status'] == GAME_STATUS_PRE:
-			searchedstring = re.search(' - (.*) EST',game['time'])
-			if searchedstring is None:
-				searchedstring = re.search(' - (.*) EDT',game['time'])
-			gametime = searchedstring.group(1)
+			if game['time'] == "TBD":
+				gametime = "TBD"
+			else:
+				searchedstring = re.search(' - (.*) EST',game['time'])
+				if searchedstring is None:
+					searchedstring = re.search(' - (.*) EDT',game['time'])
+				gametime = searchedstring.group(1)
 		elif game['status'] == GAME_STATUS_IN and game['time'] != "Halftime" and game['time'] != "Delayed" and game['time'] != "End of 2nd":
 			gametime = game['time'].replace(" - "," (") + ")"
 		else:
@@ -322,10 +328,9 @@ def updatesidebar():
 	else:
 		print('Doing Nothing, As they are the same')
 	
-try:
-	updatesidebar()
-except Exception as e:
-	print(e)
-	print('Failed to Update Sidebar')
-	quit()
-quit()
+#try:
+#	updatesidebar()
+#except Exception as e:
+#	print(e)
+#	print('Failed to Update Sidebar')
+#	quit()

@@ -1,9 +1,9 @@
 # This includes everything before the top 25 on the sidebar.
 PreTop25 = """ | | | | | | | | | |
 ---|---|----|----|----|----|----|----|----|----
+[](/r/collegebasketball) |  | [](https://www.reddit.com/hot) |  | [](/r/collegebasketball) | [](/r/collegebasketball) | | [](https://www.reddit.com/hot) |  | [](/r/collegebasketball)
 [](/r/collegebasketball) | | [](https://www.reddit.com) | | [](/r/collegebasketball) | [](/r/collegebasketball) | | [](https://www.reddit.com) | | [](/r/collegebasketball)
-[](/r/collegebasketball) | | [](https://www.reddit.com) | | [](/r/collegebasketball) | [](/r/collegebasketball) | | [](https://www.reddit.com) | | [](/r/collegebasketball)
-[](/r/collegebasketball) | | [](https://www.reddit.com) | | [](/r/collegebasketball) | [](/r/collegebasketball) | | [](https://www.reddit.com) | | [](/r/collegebasketball)
+[](/r/collegebasketball) | | [](https://www.reddit.com) | | [](/r/collegebasketball/new) | [](/r/collegebasketball) |  | [](https://www.reddit.com) | | [](/r/collegebasketball)
 
 #### 
 
@@ -75,7 +75,7 @@ tv_flairs={'BTN':'[](#l/btn)','CBS':'[](#l/cbs)','CBSSN':'[](#l/cbssn)','ESPN':'
 
 # Custom Top 25 Bar strings here.
 top25barflag = 1 # 0 uses top 25 scraped from cbbpoll.com, 1 uses days till tipoff, 2 uses custom string below
-top25customstring = "#### [](/r/collegebasketball)\n"
+top25customstring = "#### [Shrek](#f/toledo) [Arizona](#f/arizona) [Loyola Chicago](#f/loyolachicago) [Lehigh](#f/lehigh)    [Syracuse](#f/syracuse) [Temple](#f/temple) [Alabama](#f/alabama) [Rice](#f/rice) [Shrek](#f/toledo)\n"
 
 #Change the max length of the schedule.  6250 leaves ~50 characters for use.  
 maxlength = 6250
