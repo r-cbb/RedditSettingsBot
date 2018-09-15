@@ -6,6 +6,13 @@ import html
 import re
 import reddit_login
 
+MODE_ACTIVE = 0
+MODE_INACTIVE = 1
+GAME_STATUS_PRE = 0
+GAME_STATUS_IN = 1
+GAME_STATUS_POST = 2
+	
+
 def scriptlogin():
 	try:
 		r = reddit_login.login()
@@ -115,16 +122,59 @@ def setteamflair(team, teams, teamranking, teamflag):
 		teamflag = True
 		
 	return teamflair, teamflag
-			
+
+def parsevent(event):
+	game = dict()
+	
+	#GameDate
+	game["date"] = event['date']
+	
+	#Before, During, or After Game
+	status = event['status']['type']['state']
+	if status == "pre":
+		game['status'] = GAME_STATUS_PRE
+	elif status == "in":
+		game['status'] = GAME_STATUS_IN
+	else:
+		game['status'] = GAME_STATUS_POST
+	
+	#Teams, Shorthand, and Scores
+	team1 = html.unescape(event['competitions'][0]['competitors'][0]['team']['location'])
+	tid1 = event['competitions'][0]['competitors'][0]['id']
+	score1 = int(event['competitions'][0]['competitors'][0]['score'])
+	team1abv = event['competitions'][0]['competitors'][0]['team']['abbreviation']
+	team2 = html.unescape(event['competitions'][0]['competitors'][1]['team']['location'])
+	tid2 = event['competitions'][0]['competitors'][1]['id']
+	score2 = int(event['competitions'][0]['competitors'][1]['score'])
+	team2abv = event['competitions'][0]['competitors'][1]['team']['abbreviation']
+
+	# Hawaii workaround
+	if team1 == "Hawai'i":
+		team1 = "Hawaii"
+	if team2 == "Hawai'i":
+		team2 = "Hawaii"
+
+	homestatus = event['competitions'][0]['competitors'][0]['homeAway']
+	
+	if homestatus == 'home':
+		game['hometeam'], game['homeid'], game['homeabv'], game['homescore'], game['awayteam'], game['awayid'], game['awayabv'], game['awayscore'] =\
+			team1, tid1, team1abv, score1, team2, tid2, team2abv, score2
+	else:
+		game['hometeam'], game['homeid'], game['homeabv'], game['homescore'], game['awayteam'], game['awayid'], game['awayabv'], game['awayscore'] = \
+			team2, tid2, team2abv, score2, team1, tid1, team1abv, score1
+
+	game['time'] = event['status']['type']['shortDetail']
+	
+	try:
+		game['network'] = event['competitions'][0]['broadcasts'][0]['names'][0]
+	except:
+		game['network'] = 'unavailable'
+		
+	return game
+	
 def updateschedule(r):
 	import scorebot_config
-	
-	MODE_ACTIVE = 0
-	MODE_INACTIVE = 1
-	GAME_STATUS_PRE = 0
-	GAME_STATUS_IN = 1
-	GAME_STATUS_POST = 2
-	
+
 	try:
 		req = Request("http://www.espn.com/mens-college-basketball/scoreboard/_/group/50/?t=" + str(time.time()))
 		req.headers["User-Agent"] = UserAgent(verify_ssl=False).chrome
@@ -149,49 +199,14 @@ def updateschedule(r):
 	teamranking = getheaderrankingslist()
 	
 	for event in scoreData['events']:
-		team1in25 = False
-		team2in25 = False
+		hometeamin25 = False
+		awayteamin25 = False
 		hasgamethread = False
 		
-		game = dict()
-
-		game["date"] = event['date']
-		status = event['status']['type']['state']
-		if status == "pre":
-			game['status'] = GAME_STATUS_PRE
-		elif status == "in":
-			game['status'] = GAME_STATUS_IN
-		else:
-			game['status'] = GAME_STATUS_POST
-			
-		team1 = html.unescape(event['competitions'][0]['competitors'][0]['team']['location'])
-		tid1 = event['competitions'][0]['competitors'][0]['id']
-		score1 = int(event['competitions'][0]['competitors'][0]['score'])
-		team1abv = event['competitions'][0]['competitors'][0]['team']['abbreviation']
-		team2 = html.unescape(event['competitions'][0]['competitors'][1]['team']['location'])
-		tid2 = event['competitions'][0]['competitors'][1]['id']
-		score2 = int(event['competitions'][0]['competitors'][1]['score'])
-		team2abv = event['competitions'][0]['competitors'][1]['team']['abbreviation']
-
-		# Hawaii workaround
-		if team1 == "Hawai'i":
-			team1 = "Hawaii"
-		if team2 == "Hawai'i":
-			team2 = "Hawaii"
-
-		homestatus = event['competitions'][0]['competitors'][0]['homeAway']
-
-		if homestatus == 'home':
-			game['hometeam'], game['homeid'], game['homeabv'], game['homescore'], game['awayteam'], game['awayid'], game['awayabv'], game['awayscore'] =\
-				team1, tid1, team1abv, score1, team2, tid2, team2abv, score2
-		else:
-			game['hometeam'], game['homeid'], game['homeabv'], game['homescore'], game['awayteam'], game['awayid'], game['awayabv'], game['awayscore'] = \
-				team2, tid2, team2abv, score2, team1, tid1, team1abv, score1
-
-		game['time'] = event['status']['type']['shortDetail']
+		game = parsevent(event)
 		
-		print(team1 + ", " + str(tid1) + ", " + team1abv + ", " + str(score1) + ", " + str(team2) + ", " + str(tid2) + ", " + str(team2abv) + ", " + str(score2))
-		print(game['time'])
+		# print(team1 + ", " + str(tid1) + ", " + team1abv + ", " + str(score1) + ", " + str(team2) + ", " + str(tid2) + ", " + str(team2abv) + ", " + str(score2))
+		# print(game['time'])
 		
 		if game['status'] == GAME_STATUS_PRE:
 			if game['time'] == "TBD":
@@ -207,22 +222,23 @@ def updateschedule(r):
 			gametime = game['time']
 		
 		# If the team has a flair or is ranked, set the variables as such.		
-		team1flair, team1in25 = setteamflair(team1, teams, teamranking, team1in25)
-		team2flair, team2in25 = setteamflair(team2, teams, teamranking, team2in25)
+		hometeamflair, hometeamin25 = setteamflair(game['hometeam'], teams, teamranking, hometeamin25)
+		awayteamflair, awayteamin25 = setteamflair(game['awayteam'], teams, teamranking, awayteamin25)
 		
 		# Start of the schedule line for each game.
-		gamestring = gametime + " | " + team1flair + " | " + team2flair + " | "
+		gamestring = gametime + " | " + hometeamflair + " | " + awayteamflair + " | "
 
 		# Adds the network if it is being played on one.  Empty cell otherwise.
-		try:
-			game['network'] = event['competitions'][0]['broadcasts'][0]['names'][0]
-			
-			if game['network'] in scorebot_config.tv_flairs.keys():
-				networkstring=scorebot_config.tv_flairs[game['network']]
+		try:	
+			if game['network'] == 'unavailable':
+				gamestring += " | "
 			else:
-				networkstring=game['network']
+				if game['network'] in scorebot_config.tv_flairs.keys():
+					networkstring=scorebot_config.tv_flairs[game['network']]
+				else:
+					networkstring=game['network']
 			
-			gamestring += networkstring + " | "
+				gamestring += networkstring + " | "
 			
 		except:
 			gamestring += " | "
@@ -263,21 +279,21 @@ def updateschedule(r):
 			# print("AwayKey:"+awaykey[:-1]+". Away:"+team2+".")
 			# print()
 			
-			# print("HomeKey:" + homekey[0:len(team1)]+". Home:" + team1+". "+homekey[len(team1)-1:])
+			# print("HomeKey:" + homekey[0:len(game['hometeam'])]+". Home:" + game['hometeam']+". "+homekey[len(game['hometeam'])-1:])
 			# print()
 			# print(homekey[len(team2)-1:])
 						
 			# 14 is the maximum value of the game time in title.
-			if team2 == awaykey[:-1] and team1 == homekey[0:len(team1)] and len(homekey[len(team1):]) <= 14: 
-				# print("AwayKey:"+awaykey[:-1]+". Away:"+team2+".")
-				# print("HomeKey:" + homekey[0:len(team1)]+". Home:" + team1+". Rest of Key: "+homekey[len(team1):])
-				gamestring += "[" + str(score1) + "-" + str(score2) + "](" + url[key] + ")"
+			if game['awayteam'] == awaykey[:-1] and game['hometeam'] == homekey[0:len(game['hometeam'])] and len(homekey[len(game['hometeam']):]) <= 14: 
+				# print("AwayKey:"+awaykey[:-1]+". Away:"+game['awayteam']+".")
+				# print("HomeKey:" + homekey[0:len(game['hometeam'])]+". Home:" + game['hometeam']+". Rest of Key: "+homekey[len(game['hometeam']):])
+				gamestring += "[" + str(game['homescore']) + "-" + str(game['awayscore']) + "](" + url[key] + ")"
 				hasgamethread = True
 				break
 		else:
-			gamestring += str(score1) + "-" + str(score2)
+			gamestring += str(game['homescore']) + "-" + str(game['awayscore'])
 		
-		if team1in25 == True or team2in25 == True:
+		if hometeamin25 == True or awayteamin25 == True:
 			top25gamestr += gamestring + '\n'
 		elif hasgamethread == True:
 			hasgamethreadstr += gamestring + '\n'
