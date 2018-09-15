@@ -366,9 +366,9 @@ def updatesidebar():
 	else:
 		print('Doing Nothing, As they are the same')
 	
-#try:
-#	updatesidebar()
-#except Exception as e:
-#	print(e)
-#	print('Failed to Update Sidebar')
-#	quit()
+try:
+	updatesidebar()
+except Exception as e:
+	print(e)
+	print('Failed to Update Sidebar')
+	quit()
