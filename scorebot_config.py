@@ -74,7 +74,7 @@ PostTop25Header = """
 tv_flairs={'BTN':'[](#l/btn)','CBS':'[](#l/cbs)','CBSSN':'[](#l/cbssn)','ESPN':'[](#l/espn)','ESPN2':'[](#l/espn2)','ESPN3':'[](#l/espn3)','ESPNU':'[](#l/espnu)','ESPNN':'[](#l/espnews)','FOX':'[](#l/fox)','FS1':'[](#l/fs1)','FS2':'[](#l/fs2)','FSN':'[](#l/fsn)','Longhorn Network':'[](#l/lhn)','NBC':'[](#l/nbc)','NBCSN':'[](#l/nbcsn)','PAC12':'[](#l/p12n)','SECN':'[](#l/secn)','SECN+':'[](#l/secn)','TBS':'[](#l/tbs)','TNT':'[](#l/tnt)','truTV':'[](#l/trutv)','ACCNE':'[](#l/accne)'}
 
 # Custom Top 25 Bar strings here.
-top25barflag = 1 # 0 uses top 25 scraped from cbbpoll.com, 1 uses days till tipoff, 2 uses custom string below
+top25barflag = 0 # 0 uses top 25 scraped from cbbpoll.com, 1 uses days till tipoff, 2 uses days,hours till tipoff, 3 uses custom string below
 top25customstring = "#### [Shrek](#f/toledo) [Arizona](#f/arizona) [Loyola Chicago](#f/loyolachicago) [Lehigh](#f/lehigh)    [Syracuse](#f/syracuse) [Temple](#f/temple) [Alabama](#f/alabama) [Rice](#f/rice) [Shrek](#f/toledo)\n"
 
 #Change the max length of the schedule.  6250 leaves ~50 characters for use.  

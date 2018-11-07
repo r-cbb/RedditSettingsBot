@@ -23,7 +23,7 @@ Bethune-Cookman,[](#f/bethunecookman),Bethune Cookman
 Binghamton,[](#f/binghamton),Binghamton
 Boise State,[](#f/boisestate),Boise State
 Boston College,[](#f/bostoncollege),BC
-Boston Univ.,[](#f/bostonuniversity),BU
+Boston University,[](#f/bostonuniversity),BU
 Bowling Green,[](#f/bowlinggreen),Bowling Green
 Bradley,[](#f/bradley),Bradley
 Brown,[](#f/brown),Brown
@@ -37,7 +37,7 @@ California,[](#f/california),California
 Campbell,[](#f/campbell),Campbell
 Canisius,[](#f/canisius),Canisius
 Central Arkansas,[](#f/centralarkansas),University of Central Arkansas
-Central Connecticut State,[](#f/centralconnecticutstate),Central Connecticut State
+Central Connecticut,[](#f/centralconnecticutstate),Central Connecticut State
 Central Michigan,[](#f/centralmichigan),Central Michigan
 Charleston,[](#f/collegecharleston),College of Charleston
 Charleston Southern,[](#f/charlestonsouthern),Charleston Southern
@@ -56,7 +56,7 @@ UConn,[](#f/connecticut),UConn
 Coppin State,[](#f/coppinstate),Coppin State
 Cornell,[](#f/cornell),Cornell
 Creighton,[](#f/creighton),Creighton
-CSU Fullerton,[](#f/csufullerton),Cal State Fullerton
+CS Fullerton,[](#f/csufullerton),Cal State Fullerton
 CSU Bakersfield,[](#f/csubakersfield),Cal State Bakersfield
 CSU Northridge,[](#f/csunorthridge),Cal State Northridge
 Dartmouth,[](#f/dartmouth),Dartmouth
@@ -169,7 +169,7 @@ Middle Tennessee,[](#f/middletennessee),MT
 Milwaukee,[](#f/milwaukee),Milwaukee
 Minnesota,[](#f/minnesota),Minnesota
 Mississippi State,[](#f/mississippistate),Mississippi State
-Miss Valley State,[](#f/mississippivalleystate),Mississippi Valley State
+Mississippi Valley State,[](#f/mississippivalleystate),Mississippi Valley State
 Missouri,[](#f/missouri),Missouri
 Missouri State,[](#f/missouristate),Missouri State
 Monmouth,[](#f/monmouth),Monmouth
@@ -224,7 +224,7 @@ Pennsylvania,[](#f/pennsylvania),Penn
 Pepperdine,[](#f/pepperdine),Pepperdine
 Pittsburgh,[](#f/pittsburgh),Pitt
 Portland,[](#f/portland),Portland
-Portland State,[](#f/portlandstate),Portland State
+Portland St,[](#f/portlandstate),Portland State
 Prairie View A&M,[](#f/prairieviewam),Prairie View A&M
 Presbyterian,[](#f/presbyterian),Presbyterian
 Princeton,[](#f/princeton),Princeton
@@ -265,7 +265,7 @@ South Carolina Upstate,[](#f/uscupstate),SC Upstate
 South Dakota,[](#f/southdakota),South Dakota
 South Dakota State,[](#f/southdakotastate),South Dakota State
 South Florida,[](#f/usf),USF
-SE Missouri State,[](#f/southeastmissouristate),SE Missouri State
+Southeast Missouri State,[](#f/southeastmissouristate),SE Missouri State
 Southern,[](#f/southern),Southern
 Southern Illinois,[](#f/southernillinois),Southern Illinois
 Southern Miss,[](#f/southernmiss),Southern Miss

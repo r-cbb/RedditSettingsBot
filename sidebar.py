@@ -116,6 +116,7 @@ def setteamflair(team, teams, teamranking, teamflag):
 		teamflair = teams[team]
 	else:
 		teamflair = "Non D1"
+		#nond1list(team)
 	
 	if teamflair in teamranking.keys():
 		teamflair = "^#"+str(teamranking[teamflair])+' '+teamflair
@@ -123,10 +124,15 @@ def setteamflair(team, teams, teamranking, teamflag):
 		
 	return teamflair, teamflag
 
+def nond1list(team):
+	with open('cbbscorebot/nond1_list.txt','a',newline='') as out_file:
+		out_file.write(team + '\n')
+
 def pulljson():
 	try:
 		req = Request("http://www.espn.com/mens-college-basketball/scoreboard/_/group/50/?t=" + str(time.time()))
-		req.headers["User-Agent"] = UserAgent(verify_ssl=False).chrome
+		#req.headers["User-Agent"] = UserAgent(verify_ssl=False).chrome
+		req.headers["User-Agent"] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1309.0 Safari/537.17'
 	except:
 		print("Failed to Pull ESPN json file")
 		raise
@@ -160,11 +166,19 @@ def parsevent(event):
 	team1 = html.unescape(event['competitions'][0]['competitors'][0]['team']['location'])
 	tid1 = event['competitions'][0]['competitors'][0]['id']
 	score1 = int(event['competitions'][0]['competitors'][0]['score'])
-	team1abv = event['competitions'][0]['competitors'][0]['team']['abbreviation']
+	try:
+		team1abv = event['competitions'][0]['competitors'][0]['team']['abbreviation']
+	except:
+		team1abv = "na"
 	team2 = html.unescape(event['competitions'][0]['competitors'][1]['team']['location'])
 	tid2 = event['competitions'][0]['competitors'][1]['id']
 	score2 = int(event['competitions'][0]['competitors'][1]['score'])
-	team2abv = event['competitions'][0]['competitors'][1]['team']['abbreviation']
+	try:
+		team2abv = event['competitions'][0]['competitors'][1]['team']['abbreviation']
+	except:
+		team2abv = "na"
+	
+	print(team1,tid1,score1,team1abv,team2,tid2,score2,team2abv)
 
 	# Hawaii workaround
 	if team1 == "Hawai'i":
@@ -208,6 +222,7 @@ def setgametime(game):
 	return gametime
 
 def setnetwork(game,gamestring):
+	import scorebot_config
 	try:	
 		if game['network'] == 'unavailable':
 			gamestring += " | "
@@ -219,7 +234,8 @@ def setnetwork(game,gamestring):
 		
 			gamestring += networkstring + " | "
 		
-	except:
+	except Exception as e:
+		print(e)
 		gamestring += " | "
 		
 	return gamestring
@@ -339,11 +355,15 @@ def updateschedule(r):
 	return allgamestr
 
 #Off Season Time to Season Counter
-def timetoseason():
+def timetoseason(top25barflag):
 	from datetime import datetime
-	seasonstartdate = datetime(2018,11,6) #This should be manually changed every year.
+	seasonstartdate = datetime(2018,11,6,12,30) #This should be manually changed every year.
 	numofdays = abs(seasonstartdate - datetime.now()).days
-	returnstring = "#### " + str(numofdays) + " Days Until Tipoff"
+	if top25barflag == 1:
+		returnstring = "#### " + str(numofdays) + " Days Until Tipoff"
+	else:
+		numofhours = round(abs(seasonstartdate - datetime.now()).seconds/3600)
+		returnstring = "#### " + str(numofdays) + " Days, " + str(numofhours) + " Hours Until Tipoff"
 	return returnstring
 
 def updatesidebar():
@@ -353,8 +373,8 @@ def updatesidebar():
 	
 	if scorebot_config.top25barflag == 0:
 		sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + updateschedule(r) + getheaderrankings() + scorebot_config.PostTop25Header
-	elif scorebot_config.top25barflag == 1:
-		sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + updateschedule(r) +  timetoseason() + scorebot_config.PostTop25Header
+	elif scorebot_config.top25barflag == 1 or scorebot_config.top25barflag == 2:
+		sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + updateschedule(r) +  timetoseason(scorebot_config.top25barflag) + scorebot_config.PostTop25Header
 	else:
 		sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + updateschedule(r) +  scorebot_config.top25customstring + scorebot_config.PostTop25Header
 	
@@ -368,6 +388,7 @@ def updatesidebar():
 	
 try:
 	updatesidebar()
+	quit()
 except Exception as e:
 	print(e)
 	print('Failed to Update Sidebar')
