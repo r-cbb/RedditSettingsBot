@@ -11,6 +11,7 @@ PreTop25 = """ | | | | | | | | | |
 ###[Subreddit Rules](/r/collegebasketball/wiki/rules_guidelines)
 ###[Create a Game Thread](/r/collegebasketball/comments/5o5at9/introducing_ucbbbot_an_easier_way_of_making_game/)
 ###[Join us on Discord](https://discord.gg/redditcbb) [](#l/discord)
+###[Follow us on Twitter](https://twitter.com/redditCBB) [](#l/twitter)
 | | | | |
 :--:|:--:|:---|:---
 [User Poll](http://cbbpoll.com/)|
@@ -75,7 +76,7 @@ tv_flairs={'BTN':'[](#l/btn)','CBS':'[](#l/cbs)','CBSSN':'[](#l/cbssn)','ESPN':'
 
 # Custom Top 25 Bar strings here.
 top25barflag = 0 # 0 uses top 25 scraped from cbbpoll.com, 1 uses days till tipoff, 2 uses days,hours till tipoff, 3 uses custom string below
-top25customstring = "#### [Shrek](#f/toledo) [Arizona](#f/arizona) [Loyola Chicago](#f/loyolachicago) [Lehigh](#f/lehigh)    [Syracuse](#f/syracuse) [Temple](#f/temple) [Alabama](#f/alabama) [Rice](#f/rice) [Shrek](#f/toledo)\n"
+top25customstring = "####Wear a Mask! \n"
 
 #Change the max length of the schedule.  6250 leaves ~50 characters for use.  
 maxlength = 6250

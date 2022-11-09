@@ -1,25 +1,25 @@
-#1|[](#f/villanova)|Villanova (50)|1250
-#2|[](#f/michigan)|Michigan |1153
-#3|[](#f/kansas)|Kansas |1152
-#4|[](#f/duke)|Duke |1073
-#5|[](#f/texastech)|Texas Tech |946
-#6|[](#f/virginia)|Virginia |926
-#7|[](#f/loyolachicago)|Loyola Chicago |850
-#8|[](#f/purdue)|Purdue |841
-#9|[](#f/xavier)|Xavier |750
-#10|[](#f/gonzaga)|Gonzaga |702
-#11|[](#f/westvirginia)|West Virginia |688
-#12|[](#f/michiganstate)|Michigan State |636
-#13|[](#f/cincinnati)|Cincinnati |631
-#14|[](#f/northcarolina)|North Carolina |542
-#15|[](#f/clemson)|Clemson |539
-#16|[](#f/floridastate)|Florida State |491
-#17|[](#f/kentucky)|Kentucky |458
-#18|[](#f/nevada)|Nevada |414
-#19|[](#f/tennessee)|Tennessee |405
-#20|[](#f/kansasstate)|Kansas State |381
-#21|[](#f/houston)|Houston |276
-#22|[](#f/ohiostate)|Ohio State |251
-#23|[](#f/texasam)|Texas A&M |208
-#24|[](#f/syracuse)|Syracuse |131
-#25|[](#f/arizona)|Arizona |126
+#1|[](#f/gonzaga)|Gonzaga (59)|2027
+#2|[](#f/baylor)|Baylor (23)|1991
+#3|[](#f/michigan)|Michigan |1876
+#4|[](#f/ohiostate)|Ohio State |1730
+#5|[](#f/villanova)|Villanova |1632
+#6|[](#f/illinois)|Illinois |1563
+#7|[](#f/houston)|Houston |1392
+#8|[](#f/texastech)|Texas Tech |1347
+#9|[](#f/virginia)|Virginia |1224
+#10|[](#f/missouri)|Missouri |1220
+#11|[](#f/alabama)|Alabama |1152
+#12|[](#f/westvirginia)|West Virginia |1114
+#13|[](#f/texas)|Texas |1083
+#14|[](#f/oklahoma)|Oklahoma |1011
+#15|[](#f/iowa)|Iowa |924
+#16|[](#f/tennessee)|Tennessee |814
+#17|[](#f/floridastate)|Florida State |757
+#18|[](#f/usc)|USC |685
+#19|[](#f/virginiatech)|Virginia Tech |526
+#20|[](#f/creighton)|Creighton |495
+#21|[](#f/wisconsin)|Wisconsin |456
+#22|[](#f/oklahomastate)|Oklahoma State |311
+#23|[](#f/loyolachicago)|Loyola Chicago |254
+#24|[](#f/xavier)|Xavier |203
+#25|[](#f/purdue)|Purdue |145
