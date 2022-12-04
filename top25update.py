@@ -1,69 +1,76 @@
-import urllib.request
+#import urllib.request
+from urllib.request import urlopen, Request
 import shutil
-# import os
+import json
 
+#Get Team List of current active teams.  cbbpoll.net, espn, r/collegebasketball, and kenpom (Unused)
 def get_teams():
-	with open('cbbscorebot/team_list.txt','r') as imp_file:
-		lines=imp_file.readlines()
-	flairs={}
-	rank_names={}
-	for line in lines:
-		(team,flair,rank_name)=line.replace('\n','').split(',')
-		flairs[team]=flair
-		rank_names[rank_name]=team
-	return flairs,rank_names
+    with open('cbbscorebot/team_list.txt','r') as imp_file:
+        lines=imp_file.readlines()
+    flairs={}
+    rank_names={}
+    for line in lines:
+        (team,flair,rank_name,kenpom)=line.replace('\n','').split(',')
+        flairs[team]=flair
+        rank_names[rank_name]=team
+    return flairs,rank_names
 
+#Request Webpage
+def webrequest():
+    try:
+        req = Request("https://www.cbbpoll.net/")
+        req.headers["User-Agent"] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1309.0 Safari/537.17'
+    except:
+        print("Failed to Pull cbbpoll json file")
+        raise
+
+    return req
+    
+#Pull the json
+def loaddata(req):
+    line = urlopen(req).read().decode('utf-8')
+    start_str = 'type="application/json">'
+    start_index = line.find(start_str)
+    data = json.loads(line[start_index + len(start_str): line.find('</script>', start_index)])
+    top25rank = data['props']['pageProps']['userpoll']
+
+    return top25rank              
+                
+# Main Program Call                
 def get_rcbb_poll():
-	(flairs,rank_names)=get_teams()
-	url='http://cbbpoll.com/'
-	with urllib.request.urlopen(url) as response, open ('cbbscorebot/ranking.html', 'wb') as out_file:
-		shutil.copyfileobj(response, out_file)
-	with open('cbbscorebot/ranking.html','r') as imp_file:
-		lines=imp_file.readlines()
-	ranking,headerranking,first_place_votes=[],[],[]
-	i=1
-	while i<125:
-		first_place_votes.append('('+str(i)+')')
-		i=i+1
+    (flairs,rank_names)=get_teams()
 
-	for line in lines:
-		if "<td><span class='team-name'>" in line:
-			# Rank
-			team_rank=lines[lines.index(line)-1].replace('<td>','').replace('</td>','')
-			# Votes
-			team_vote=lines[lines.index(line)+1].replace('<td>','').replace('</td>','')
-			# Team, FPV
-			line=line.replace('&#39;',"'").replace('&#38;','&')
-			begin=line.find('></span>')
-			end=line.find('</span></td>')
-			team=line[begin+9:end]
-			for vote in first_place_votes:
-				if vote in team:
-					team=team.replace(vote,'')
-					team_fpv=vote
-					break
-			else:
-				team_fpv=''
-			
-			ranking.append("#"+str(int(team_rank))+"|"+flairs[rank_names[team.replace('&amp;','&')]]+"|"+team.replace('&amp;','&')+" "+team_fpv+"|"+str(int(team_vote)))
-			
-			headerranking.append(flairs[rank_names[team.replace('&amp;','&')]])
-			
-	# os.remove('cbbscorebot/ranking.html')
-	with open('cbbscorebot/ranking.txt','w') as f:
-		for team in ranking:
-			f.write(team+'\n')
-		
-	with open('cbbscorebot/headerranking.txt','w') as f:
-		for team in headerranking:
-			if team == headerranking[-1]:
-				f.write(team)
-			else:
-				f.write(team+' ')
+    ranking,headerranking,first_place_votes=[],[],[]
+
+    top25rank = loaddata(webrequest())
+
+    for i in range(25):
+        team = top25rank[i]['shortName']
+        team_rank = top25rank[i]['rank']
+        team_vote = top25rank[i]['points']
+        if top25rank[i]['firstPlaceVotes'] == 0:
+            team_fpv = ''
+        else:
+            team_fpv = "("+str(top25rank[i]['firstPlaceVotes'])+")"
+                
+        ranking.append("#"+str(int(team_rank))+"|"+flairs[rank_names[team.replace('&amp;','&')]]+"|"+team.replace('&amp;','&')+" "+team_fpv+"|"+str(int(team_vote)))
+        headerranking.append(flairs[rank_names[team.replace('&amp;','&')]])
+            
+    with open('cbbscorebot/ranking.txt','w') as f:
+        for team in ranking:
+            f.write(team+'\n')
+        
+    with open('cbbscorebot/headerranking.txt','w') as f:
+        for team in headerranking:
+            if team == headerranking[-1]:
+                f.write(team)
+            else:
+                f.write(team+' ')
 
 try:
-	get_rcbb_poll()
+    get_rcbb_poll()
 except:
-	print("Failed to Pull cbb poll")
-	quit()
+    print("Failed to Pull cbb poll")
+    quit()
 quit()
+

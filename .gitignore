@@ -4,3 +4,4 @@ log.txt
 authorized_keys
 RedditSettingsBot
 *.pyc
+Backups/
