@@ -1,357 +1,363 @@
-Abilene Christian,[](#f/abilenechristian),Abilene Christian
-Air Force,[](#f/airforce),Air Force
-Akron,[](#f/akron),Akron
-Alabama,[](#f/alabama),Alabama
-Alabama A&M,[](#f/alabamaam),Alabama A & M
-Alabama State,[](#f/alabamastate),Alabama State
-Albany,[](#f/albany),Albany
-Alcorn State,[](#f/alcornstate),Alcorn State
-American,[](#f/american),American
-Appalachian State,[](#f/appalachianstate),Appalachian State
-Arizona,[](#f/arizona),Arizona
-Arizona State,[](#f/arizonastate),Arizona State
-Arkansas,[](#f/arkansas),Arkansas
-Arkansas State,[](#f/arkansasstate),Arkansas State
-Arkansas-Pine Bluff,[](#f/uapb),Arkansas-Pine Bluff
-Army,[](#f/army),Army
-Auburn,[](#f/auburn),Auburn
-Austin Peay,[](#f/austinpeay),Austin Peay
-Ball State,[](#f/ballstate),Ball State
-Baylor,[](#f/baylor),Baylor
-Bellarmine,[](#f/bellarmine),Bellarmine
-Belmont,[](#f/belmont),Belmont
-Bethune-Cookman,[](#f/bethunecookman),Bethune Cookman
-Binghamton,[](#f/binghamton),Binghamton
-Boise State,[](#f/boisestate),Boise State
-Boston College,[](#f/bostoncollege),BC
-Boston University,[](#f/bostonuniversity),BU
-Bowling Green,[](#f/bowlinggreen),Bowling Green
-Bradley,[](#f/bradley),Bradley
-Brown,[](#f/brown),Brown
-Bryant,[](#f/bryant),Bryant
-Bucknell,[](#f/bucknell),Bucknell
-Buffalo,[](#f/buffalo),Buffalo
-Butler,[](#f/butler),Butler
-BYU,[](#f/byu),BYU
-Cal Poly,[](#f/calpoly),Cal Poly
-California,[](#f/california),California
-California Baptist,[](#f/californiabaptist),Cal Baptist
-Campbell,[](#f/campbell),Campbell
-Canisius,[](#f/canisius),Canisius
-Central Arkansas,[](#f/centralarkansas),University of Central Arkansas
-Central Connecticut,[](#f/ccsu),Central Connecticut State
-Central Michigan,[](#f/centralmichigan),Central Michigan
-Charleston,[](#f/collegecharleston),College of Charleston
-Charleston Southern,[](#f/charlestonsouthern),Charleston Southern
-Charlotte,[](#f/charlotte),Charlotte
-Chattanooga,[](#f/chattanooga),Chattanooga
-Chicago State,[](#f/chicagostate),Chicago State
-Cincinnati,[](#f/cincinnati),Cincinnati
-Clemson,[](#f/clemson),Clemson
-Cleveland State,[](#f/clevelandstate),Cleveland State
-Coastal Carolina,[](#f/coastalcarolina),Coastal Carolina
-Colgate,[](#f/colgate),Colgate
-Colorado,[](#f/colorado),Colorado
-Colorado State,[](#f/coloradostate),Colorado State
-Columbia,[](#f/columbia),Columbia
-Coppin State,[](#f/coppinstate),Coppin State
-Cornell,[](#f/cornell),Cornell
-Creighton,[](#f/creighton),Creighton
-CSU Bakersfield,[](#f/csubakersfield),Cal State Bakersfield
-CSU Fullerton,[](#f/csufullerton),Cal State Fullerton
-CSU Northridge,[](#f/csunorthridge),Cal State Northridge
-Dartmouth,[](#f/dartmouth),Dartmouth
-Davidson,[](#f/davidson),Davidson
-Dayton,[](#f/dayton),Dayton
-Delaware,[](#f/delaware),Delaware
-Delaware State,[](#f/delawarestate),Delaware State
-Denver,[](#f/denver),Denver
-DePaul,[](#f/depaul),DePaul
-Detroit Mercy,[](#f/detroitmercy),Detroit
-Dixie State,[](#f/dixiestate),Dixie State
-Drake,[](#f/drake),Drake
-Drexel,[](#f/drexel),Drexel
-Duke,[](#f/duke),Duke
-Duquesne,[](#f/duquesne),Duquesne
-East Carolina,[](#f/ecu),ECU
-East Tennessee State,[](#f/easttennesseestate),ETSU
-Eastern Illinois,[](#f/easternillinois),Eastern Illinois
-Eastern Kentucky,[](#f/easternkentucky),Eastern Kentucky
-Eastern Michigan,[](#f/easternmichigan),Eastern Michigan
-Eastern Washington,[](#f/easternwashington),Eastern Washington
-Elon,[](#f/elon),Elon
-Evansville,[](#f/evansville),Evansville
-Fairfield,[](#f/fairfield),Fairfield
-Fairleigh Dickinson,[](#f/fairleighdickinson),Fairleigh Dickinson
-Florida,[](#f/florida),Florida
-Florida A&M,[](#f/floridaam),Florida A&M
-Florida Atlantic,[](#f/fau),Florida Atlantic
-Florida Gulf Coast,[](#f/floridagulfcoast),Florida Gulf Coast
-Florida International,[](#f/fiu),FIU
-Florida State,[](#f/floridastate),Florida State
-Fordham,[](#f/fordham),Fordham
-Fresno State,[](#f/fresnostate),Fresno State
-Furman,[](#f/furman),Furman
-Gardner-Webb,[](#f/gardnerwebb),Gardner-Webb
-George Mason,[](#f/georgemason),George Mason
-George Washington,[](#f/georgewashington),GW
-Georgetown,[](#f/georgetown),Georgetown
-Georgia,[](#f/georgia),Georgia
-Georgia Southern,[](#f/georgiasouthern),Georgia Southern
-Georgia State,[](#f/georgiastate),Georgia State
-Georgia Tech,[](#f/georgiatech),Georgia Tech
-Gonzaga,[](#f/gonzaga),Gonzaga
-Grambling,[](#f/grambling),Grambling State
-Grand Canyon,[](#f/grandcanyon),Grand Canyon
-Green Bay,[](#f/greenbay),Green Bay
-Hampton,[](#f/hampton),Hampton
-Hartford,[](#f/hartford),Hartford
-Harvard,[](#f/harvard),Harvard
-Hawai'i,[](#f/hawaii),Hawaii
-High Point,[](#f/highpoint),High Point
-Hofstra,[](#f/hofstra),Hofstra
-Holy Cross,[](#f/holycross),Holy Cross
-Houston,[](#f/houston),Houston
-Houston Baptist,[](#f/houstonbaptist),Houston Baptist
-Howard,[](#f/howard),Howard
-Idaho,[](#f/idaho),Idaho
-Idaho State,[](#f/idahostate),Idaho State
-Illinois,[](#f/illinois),Illinois
-Illinois State,[](#f/illinoisstate),Illinois State
-Incarnate Word,[](#f/incarnateword),Incarnate Word
-Indiana,[](#f/indiana),Indiana
-Indiana State,[](#f/indianastate),Indiana State
-Iona,[](#f/iona),Iona
-Iowa,[](#f/iowa),Iowa
-Iowa State,[](#f/iowastate),Iowa State
-IUPUI,[](#f/iupui),IUPUI
-Jackson State,[](#f/jacksonstate),Jackson State
-Jacksonville,[](#f/jacksonville),Jacksonville
-Jacksonville State,[](#f/jacksonvillestate),Jacksonville State
-James Madison,[](#f/jamesmadison),James Madison
-Kansas,[](#f/kansas),Kansas
-Kansas State,[](#f/kansasstate),Kansas State
-Kennesaw State,[](#f/kennesawstate),Kennesaw State
-Kent State,[](#f/kentstate),Kent State
-Kentucky,[](#f/kentucky),Kentucky
-La Salle,[](#f/lasalle),La Salle
-Lafayette,[](#f/lafayette),Lafayette
-Lamar,[](#f/lamar),Lamar
-Lehigh,[](#f/lehigh),Lehigh
-Liberty,[](#f/liberty),Liberty
-Lipscomb,[](#f/lipscomb),Lipscomb
-Little Rock,[](#f/ualr),Little Rock
-Long Beach State,[](#f/csulongbeach),Long Beach State
-Long Island University,[](#f/liu),LIU-Brooklyn
-Longwood,[](#f/longwood),Longwood
-Louisiana,[](#f/louisiana),Louisiana
-Louisiana Tech,[](#f/louisianatech),Louisiana Tech
-Louisville,[](#f/louisville),Louisville
-Loyola (MD),[](#f/loyolamaryland),Loyola-MD
-Loyola Chicago,[](#f/loyolachicago),Loyola Chicago
-Loyola Marymount,[](#f/loyolamarymount),Loyola Marymount
-LSU,[](#f/lsu),LSU
-Maine,[](#f/maine),Maine
-Manhattan,[](#f/manhattan),Manhattan
-Marist,[](#f/marist),Marist
-Marquette,[](#f/marquette),Marquette
-Marshall,[](#f/marshall),Marshall
-Maryland,[](#f/maryland),Maryland
-Maryland-Eastern Shore,[](#f/umes),UMES
-McNeese,[](#f/mcneese),McNeese
-Memphis,[](#f/memphis),Memphis
-Mercer,[](#f/mercer),Mercer
-Merrimack,[](#f/merrimack),Merrimack
-Miami,[](#f/miami),Miami (FL)
-Miami (OH),[](#f/miamioh),Miami (OH)
-Michigan,[](#f/michigan),Michigan
-Michigan State,[](#f/michiganstate),Michigan State
-Middle Tennessee,[](#f/middletennessee),MT
-Milwaukee,[](#f/milwaukee),Milwaukee
-Minnesota,[](#f/minnesota),Minnesota
-Mississippi State,[](#f/mississippistate),Mississippi State
-Mississippi Valley State,[](#f/mvsu),Mississippi Valley State
-Missouri,[](#f/missouri),Missouri
-Missouri State,[](#f/missouristate),Missouri State
-Monmouth,[](#f/monmouth),Monmouth
-Montana,[](#f/montana),Montana
-Montana State,[](#f/montanastate),Montana State
-Morehead State,[](#f/moreheadstate),Morehead State
-Morgan State,[](#f/morganstate),Morgan State
-Mount St. Mary's,[](#f/mountstmarys),Mt. St. Mary's
-Murray State,[](#f/murraystate),Murray State
-Navy,[](#f/navy),Navy
-NC State,[](#f/ncstate),NC State
-Nebraska,[](#f/nebraska),Nebraska
-Nevada,[](#f/nevada),Nevada
-New Hampshire,[](#f/newhampshire),UNH
-New Mexico,[](#f/newmexico),New Mexico
-New Mexico State,[](#f/newmexicostate),New Mexico State
-New Orleans,[](#f/neworleans),New Orleans
-Niagara,[](#f/niagara),Niagara
-Nicholls,[](#f/nicholls),Nicholls State University
-NJIT,[](#f/njit),NJIT
-Norfolk State,[](#f/norfolkstate),Norfolk State
-North Alabama,[](#f/northalabama),North Alabama
-North Carolina,[](#f/northcarolina),North Carolina
-North Carolina A&T,[](#f/northcarolinaat),NC A&T
-North Carolina Central,[](#f/nccu),NC Central
-North Dakota,[](#f/northdakota),North Dakota
-North Dakota State,[](#f/northdakotastate),North Dakota State
-North Florida,[](#f/northflorida),North Florida
-North Texas,[](#f/northtexas),North Texas
-Northeastern,[](#f/northeastern),Northeastern
-Northern Arizona,[](#f/northernarizona),Northern Arizona
-Northern Colorado,[](#f/northerncolorado),Northern Colorado
-Northern Illinois,[](#f/northernillinois),Northern Illinois
-Northern Iowa,[](#f/northerniowa),Northern Iowa
-Northern Kentucky,[](#f/northernkentucky),Northern Kentucky
-Northwestern,[](#f/northwestern),Northwestern
-Northwestern State,[](#f/northwesternstate),Northwestern State
-Notre Dame,[](#f/notredame),Notre Dame
-Oakland,[](#f/oakland),Oakland
-Ohio,[](#f/ohio),Ohio
-Ohio State,[](#f/ohiostate),Ohio State
-Oklahoma,[](#f/oklahoma),Oklahoma
-Oklahoma State,[](#f/oklahomastate),Oklahoma State
-Old Dominion,[](#f/olddominion),Old Dominion
-Ole Miss,[](#f/olemiss),Ole Miss
-Omaha,[](#f/nebraskaomaha),Nebraska-Omaha
-Oral Roberts,[](#f/oralroberts),Oral Roberts
-Oregon,[](#f/oregon),Oregon
-Oregon State,[](#f/oregonstate),Oregon State
-Pacific,[](#f/pacific),Pacific
-Penn State,[](#f/pennstate),Penn State
-Pennsylvania,[](#f/pennsylvania),Penn
-Pepperdine,[](#f/pepperdine),Pepperdine
-Pittsburgh,[](#f/pittsburgh),Pitt
-Portland,[](#f/portland),Portland
-Portland State,[](#f/portlandstate),Portland State
-Prairie View A&M,[](#f/prairieviewam),Prairie View A&M
-Presbyterian,[](#f/presbyterian),Presbyterian
-Princeton,[](#f/princeton),Princeton
-Providence,[](#f/providence),Providence
-Purdue,[](#f/purdue),Purdue
-Purdue Fort Wayne,[](#f/fortwayne),Fort Wayne
-Quinnipiac,[](#f/quinnipiac),Quinnipiac
-Radford,[](#f/radford),Radford
-Rhode Island,[](#f/rhodeisland),URI
-Rice,[](#f/rice),Rice
-Richmond,[](#f/richmond),Richmond
-Rider,[](#f/rider),Rider
-Robert Morris,[](#f/robertmorris),Robert Morris
-Rutgers,[](#f/rutgers),Rutgers
-Sacramento State,[](#f/sacramentostate),Sacramento State
-Sacred Heart,[](#f/sacredheart),Sacred Heart
-Saint Joseph's,[](#f/stjosephspa),St. Joseph's
-Saint Louis,[](#f/saintlouis),St. Louis
-Saint Mary's,[](#f/stmarys),St. Mary's
-Saint Peter's,[](#f/stpeters),St. Peter's
-Sam Houston State,[](#f/samhoustonstate),Sam Houston State
-Samford,[](#f/samford),Samford
-San Diego,[](#f/sandiego),San Diego
-San Diego State,[](#f/sandiegostate),San Diego State
-San Francisco,[](#f/sanfrancisco),San Francisco
-San Jos� State,[](#f/sanjosestate),San Jose State
-Santa Clara,[](#f/santaclara),Santa Clara
-SE Louisiana,[](#f/southeasternlouisiana),Southeastern Louisiana
-Seattle U,[](#f/seattle),Seattle
-Seton Hall,[](#f/setonhall),Seton Hall
-Siena,[](#f/siena),Siena
-SIU Edwardsville,[](#f/siue),SIU Edwardsville
-SMU,[](#f/smu),SMU
-South Alabama,[](#f/southalabama),South Alabama
-South Carolina,[](#f/southcarolina),South Carolina
-South Carolina State,[](#f/southcarolinastate),SC State
-South Carolina Upstate,[](#f/uscupstate),SC Upstate
-South Dakota,[](#f/southdakota),South Dakota
-South Dakota State,[](#f/southdakotastate),South Dakota State
-South Florida,[](#f/usf),USF
-Southeast Missouri State,[](#f/southeastmissouri),SE Missouri State
-Southern,[](#f/southern),Southern
-Southern Illinois,[](#f/southernillinois),Southern Illinois
-Southern Miss,[](#f/southernmiss),Southern Miss
-Southern Utah,[](#f/southernutah),Southern Utah
-St. Bonaventure,[](#f/stbonaventure),St. Bonaventure
-St. Francis (BKN),[](#f/stfrancisbrooklyn),St. Francis Brooklyn
-St. Francis (PA),[](#f/stfrancis),St. Francis PA
-St. John's,[](#f/stjohnsny),St. John's
-Stanford,[](#f/stanford),Stanford
-Stephen F. Austin,[](#f/stephenfaustin),Stephen F. Austin
-Stetson,[](#f/stetson),Stetson
-Stony Brook,[](#f/stonybrook),Stony Brook
-Syracuse,[](#f/syracuse),Syracuse
-Tarleton,[](#f/tarletonstate),Tarleton
-TCU,[](#f/tcu),TCU
-Temple,[](#f/temple),Temple
-Tennessee,[](#f/tennessee),Tennessee
-Tennessee State,[](#f/tennesseestate),Tennessee State
-Tennessee Tech,[](#f/tennesseetech),Tennessee Tech
-Texas,[](#f/texas),Texas
-Texas A&M,[](#f/texasam),Texas A&M
-Texas A&M-CC,[](#f/texasamcorpuschristi),Texas A&M-Corpus Christi
-Texas Southern,[](#f/texassouthern),Texas Southern
-Texas State,[](#f/texasstate),Texas State
-Texas Tech,[](#f/texastech),Texas Tech
-The Citadel,[](#f/citadel),The Citadel
-Toledo,[](#f/toledo),Toledo
-Towson,[](#f/towson),Towson
-Troy,[](#f/troy),Troy
-Tulane,[](#f/tulane),Tulane
-Tulsa,[](#f/tulsa),Tulsa
-UAB,[](#f/uab),UAB
-UC Davis,[](#f/ucdavis),UC Davis
-UC Irvine,[](#f/ucirvine),UC Irvine
-UC Riverside,[](#f/ucriverside),UC Riverside
-UC San Diego,[](#f/ucsd),UC San Diego
-UC Santa Barbara,[](#f/ucsb),UC Santa Barbara
-UCF,[](#f/ucf),UCF
-UCLA,[](#f/ucla),UCLA
-UConn,[](#f/connecticut),UConn
-UIC,[](#f/uic),UIC
-UL Monroe,[](#f/ulm),ULM
-UM Kansas City,[](#f/umkc),UMKC
-UMass,[](#f/umass),UMass
-UMass Lowell,[](#f/massachusettslowell),UMass Lowell
-UMBC,[](#f/umbc),UMBC
-UNC Asheville,[](#f/uncasheville),UNC Asheville
-UNC Greensboro,[](#f/uncgreensboro),UNC Greensboro
-UNC Wilmington,[](#f/uncwilmington),UNC Wilmington
-UNLV,[](#f/unlv),UNLV
-USC,[](#f/usc),USC
-UT Arlington,[](#f/utarlington),UT-Arlington
-UT Martin,[](#f/utmartin),Tennessee-Martin
-UT Rio Grande Valley,[](#f/texasriograndevalley),UTRGV
-Utah,[](#f/utah),Utah
-Utah State,[](#f/utahstate),Utah State
-Utah Valley,[](#f/utahvalley),Utah Valley
-UTEP,[](#f/utep),UTEP
-UTSA,[](#f/utsa),UTSA
-Valparaiso,[](#f/valparaiso),Valparaiso
-Vanderbilt,[](#f/vanderbilt),Vanderbilt
-VCU,[](#f/vcu),VCU
-Vermont,[](#f/vermont),UVM
-Villanova,[](#f/villanova),Villanova
-Virginia,[](#f/virginia),Virginia
-Virginia Tech,[](#f/virginiatech),Virginia Tech
-VMI,[](#f/vmi),VMI
-Wagner,[](#f/wagner),Wagner
-Wake Forest,[](#f/wakeforest),Wake Forest
-Washington,[](#f/washington),Washington
-Washington State,[](#f/washingtonstate),Washington State
-Weber State,[](#f/weberstate),Weber State
-West Virginia,[](#f/westvirginia),West Virginia
-Western Carolina,[](#f/westerncarolina),Western Carolina
-Western Illinois,[](#f/westernillinois),Western Illinois
-Western Kentucky,[](#f/wku),Western Kentucky
-Western Michigan,[](#f/westernmichigan),Western Michigan
-Wichita State,[](#f/wichitastate),Wichita State
-William & Mary,[](#f/williammary),William & Mary
-Winthrop,[](#f/winthrop),Winthrop
-Wisconsin,[](#f/wisconsin),Wisconsin
-Wofford,[](#f/wofford),Wofford
-Wright State,[](#f/wrightstate),Wright State
-Wyoming,[](#f/wyoming),Wyoming
-Xavier,[](#f/xavier),Xavier
-Yale,[](#f/yale),Yale
-Youngstown State,[](#f/youngstownstate),Youngstown State
+Abilene Christian,[Abilene Christian](#f/abilenechristian),Abilene Christian,Abilene Christian
+Air Force,[Air Force](#f/airforce),Air Force,Air Force
+Akron,[Akron](#f/akron),Akron,Akron
+Alabama,[Alabama](#f/alabama),Alabama,Alabama
+Alabama A&M,[Alabama A&M](#f/alabamaam),Alabama A & M,Alabama A&M
+Alabama State,[Alabama State](#f/alabamastate),Alabama State,Alabama St.
+Albany,[Albany](#f/albany),Albany,Albany
+Alcorn State,[Alcorn State](#f/alcornstate),Alcorn State,Alcorn St.
+American University,[American University](#f/american),American,American
+Appalachian State,[Appalachian State](#f/appalachianstate),Appalachian State,Appalachian St.
+Arizona,[Arizona](#f/arizona),Arizona,Arizona
+Arizona State,[Arizona State](#f/arizonastate),Arizona State,Arizona St.
+Arkansas,[Arkansas](#f/arkansas),Arkansas,Arkansas
+Arkansas State,[Arkansas State](#f/arkansasstate),Arkansas State,Arkansas St.
+Arkansas-Pine Bluff,[UAPB](#f/uapb),Arkansas-Pine Bluff,Arkansas Pine Bluff
+Army,[Army](#f/army),Army,Army
+Auburn,[Auburn](#f/auburn),Auburn,Auburn
+Austin Peay,[Austin Peay](#f/austinpeay),Austin Peay,Austin Peay
+Ball State,[Ball State](#f/ballstate),Ball State,Ball St.
+Baylor,[Baylor](#f/baylor),Baylor,Baylor
+Bellarmine,[Bellarmine](#f/bellarmine),Bellarmine,Bellarmine
+Belmont,[Belmont](#f/belmont),Belmont,Belmont
+Bethune-Cookman,[Bethune-Cookman](#f/bethunecookman),Bethune Cookman,Bethune Cookman
+Binghamton,[Binghamton](#f/binghamton),Binghamton,Binghamton
+Boise State,[Boise State](#f/boisestate),Boise State,Boise St.
+Boston College,[Boston College](#f/bostoncollege),BC,Boston College
+Boston University,[Boston University](#f/bostonuniversity),BU,Boston University
+Bowling Green,[Bowling Green](#f/bowlinggreen),Bowling Green,Bowling Green
+Bradley,[Bradley](#f/bradley),Bradley,Bradley
+Brown,[Brown](#f/brown),Brown,Brown
+Bryant,[Bryant](#f/bryant),Bryant,Bryant
+Bucknell,[Bucknell](#f/bucknell),Bucknell,Bucknell
+Buffalo,[Buffalo](#f/buffalo),Buffalo,Buffalo
+Butler,[Butler](#f/butler),Butler,Butler
+BYU,[BYU](#f/byu),BYU,BYU
+Cal Poly,[Cal Poly](#f/calpoly),Cal Poly,Cal Poly
+Cal State Bakersfield,[CSU Bakersfield](#f/csubakersfield),Cal State Bakersfield,Cal St. Bakersfield
+Cal State Fullerton,[Cal State Fullerton](#f/csufullerton),Cal State Fullerton,Cal St. Fullerton
+Cal State Northridge,[CSUN](#f/csunorthridge),Cal State Northridge,Cal St. Northridge
+California,[California](#f/california),California,California
+California Baptist,[](#f/californiabaptist),Cal Baptist,Cal Baptist
+Campbell,[](#f/campbell),Campbell,Campbell
+Canisius,[](#f/canisius),Canisius,Canisius
+Central Arkansas,[](#f/centralarkansas),University of Central Arkansas,Central Arkansas
+Central Connecticut,[](#f/ccsu),Central Connecticut State,Central Connecticut
+Central Michigan,[](#f/centralmichigan),Central Michigan,Central Michigan
+Charleston,[](#f/collegecharleston),College of Charleston,Charleston
+Charleston Southern,[](#f/charlestonsouthern),Charleston Southern,Charleston Southern
+Charlotte,[](#f/charlotte),Charlotte,Charlotte
+Chattanooga,[](#f/chattanooga),Chattanooga,Chattanooga
+Chicago State,[](#f/chicagostate),Chicago State,Chicago St.
+Cincinnati,[](#f/cincinnati),Cincinnati,Cincinnati
+Clemson,[](#f/clemson),Clemson,Clemson
+Cleveland State,[](#f/clevelandstate),Cleveland State,Cleveland St.
+Coastal Carolina,[](#f/coastalcarolina),Coastal Carolina,Coastal Carolina
+Colgate,[](#f/colgate),Colgate,Colgate
+Colorado,[](#f/colorado),Colorado,Colorado
+Colorado State,[](#f/coloradostate),Colorado State,Colorado St.
+Columbia,[](#f/columbia),Columbia,Columbia
+Coppin State,[](#f/coppinstate),Coppin State,Coppin St.
+Cornell,[](#f/cornell),Cornell,Cornell
+Creighton,[](#f/creighton),Creighton,Creighton
+Dartmouth,[](#f/dartmouth),Dartmouth,Dartmouth
+Davidson,[](#f/davidson),Davidson,Davidson
+Dayton,[](#f/dayton),Dayton,Dayton
+Delaware,[](#f/delaware),Delaware,Delaware
+Delaware State,[](#f/delawarestate),Delaware State,Delaware St.
+Denver,[](#f/denver),Denver,Denver
+DePaul,[](#f/depaul),DePaul,DePaul
+Detroit Mercy,[](#f/detroitmercy),Detroit,Detroit Mercy
+Drake,[](#f/drake),Drake,Drake
+Drexel,[](#f/drexel),Drexel,Drexel
+Duke,[](#f/duke),Duke,Duke
+Duquesne,[](#f/duquesne),Duquesne,Duquesne
+East Carolina,[](#f/ecu),ECU,East Carolina
+East Tennessee State,[](#f/easttennesseestate),ETSU,East Tennessee St.
+Eastern Illinois,[](#f/easternillinois),Eastern Illinois,Eastern Illinois
+Eastern Kentucky,[](#f/easternkentucky),Eastern Kentucky,Eastern Kentucky
+Eastern Michigan,[](#f/easternmichigan),Eastern Michigan,Eastern Michigan
+Eastern Washington,[](#f/easternwashington),Eastern Washington,Eastern Washington
+Elon,[](#f/elon),Elon,Elon
+Evansville,[](#f/evansville),Evansville,Evansville
+Fairfield,[](#f/fairfield),Fairfield,Fairfield
+Fairleigh Dickinson,[](#f/fairleighdickinson),Fairleigh Dickinson,Fairleigh Dickinson
+Florida,[](#f/florida),Florida,Florida
+Florida A&M,[](#f/floridaam),Florida A&M,Florida A&M
+Florida Atlantic,[](#f/fau),Florida Atlantic,Florida Atlantic
+Florida Gulf Coast,[](#f/floridagulfcoast),Florida Gulf Coast,Florida Gulf Coast
+Florida International,[](#f/fiu),FIU,FIU
+Florida State,[](#f/floridastate),Florida State,Florida St.
+Fordham,[](#f/fordham),Fordham,Fordham
+Fresno State,[](#f/fresnostate),Fresno State,Fresno St.
+Furman,[](#f/furman),Furman,Furman
+Gardner-Webb,[](#f/gardnerwebb),Gardner-Webb,Gardner Webb
+George Mason,[](#f/georgemason),George Mason,George Mason
+George Washington,[](#f/georgewashington),GW,George Washington
+Georgetown,[](#f/georgetown),Georgetown,Georgetown
+Georgia,[](#f/georgia),Georgia,Georgia
+Georgia Southern,[](#f/georgiasouthern),Georgia Southern,Georgia Southern
+Georgia State,[](#f/georgiastate),Georgia State,Georgia St.
+Georgia Tech,[](#f/georgiatech),Georgia Tech,Georgia Tech
+Gonzaga,[](#f/gonzaga),Gonzaga,Gonzaga
+Grambling,[](#f/grambling),Grambling State,Grambling St.
+Grand Canyon,[](#f/grandcanyon),Grand Canyon,Grand Canyon
+Green Bay,[](#f/greenbay),Green Bay,Green Bay
+Hampton,[](#f/hampton),Hampton,Hampton
+Hartford,[](#f/hartford),Hartford,Hartford
+Harvard,[](#f/harvard),Harvard,Harvard
+Hawai'i,[](#f/hawaii),Hawaii,Hawaii
+High Point,[](#f/highpoint),High Point,High Point
+Hofstra,[](#f/hofstra),Hofstra,Hofstra
+Holy Cross,[](#f/holycross),Holy Cross,Holy Cross
+Houston,[](#f/houston),Houston,Houston
+Houston Christian,[](#f/houstonbaptist),Houston Baptist,Houston Christian
+Howard,[](#f/howard),Howard,Howard
+Idaho,[](#f/idaho),Idaho,Idaho
+Idaho State,[](#f/idahostate),Idaho State,Idaho St.
+Illinois,[](#f/illinois),Illinois,Illinois
+Illinois State,[](#f/illinoisstate),Illinois State,Illinois St.
+Incarnate Word,[](#f/incarnateword),Incarnate Word,Incarnate Word
+Indiana,[](#f/indiana),Indiana,Indiana
+Indiana State,[](#f/indianastate),Indiana State,Indiana St.
+Iona,[](#f/iona),Iona,Iona
+Iowa,[](#f/iowa),Iowa,Iowa
+Iowa State,[](#f/iowastate),Iowa State,Iowa St.
+IUPUI,[](#f/iupui),IUPUI,IUPUI
+Jackson State,[](#f/jacksonstate),Jackson State,Jackson St.
+Jacksonville,[](#f/jacksonville),Jacksonville,Jacksonville
+Jacksonville State,[](#f/jacksonvillestate),Jacksonville State,Jacksonville St.
+James Madison,[](#f/jamesmadison),James Madison,James Madison
+Kansas,[](#f/kansas),Kansas,Kansas
+Kansas City,[](#f/umkc),UMKC,UMKC
+Kansas State,[](#f/kansasstate),Kansas State,Kansas St.
+Kennesaw State,[](#f/kennesawstate),Kennesaw State,Kennesaw St.
+Kent State,[](#f/kentstate),Kent State,Kent St.
+Kentucky,[](#f/kentucky),Kentucky,Kentucky
+La Salle,[](#f/lasalle),La Salle,La Salle
+Lafayette,[](#f/lafayette),Lafayette,Lafayette
+Lamar,[](#f/lamar),Lamar,Lamar
+Lehigh,[](#f/lehigh),Lehigh,Lehigh
+Liberty,[](#f/liberty),Liberty,Liberty
+Lindenwood,[](#f/lindenwood),,Lindenwood
+Lipscomb,[](#f/lipscomb),Lipscomb,Lipscomb
+Little Rock,[](#f/ualr),Little Rock,Little Rock
+Long Beach State,[](#f/csulongbeach),Long Beach State,Long Beach St.
+Long Island University,[](#f/liu),LIU-Brooklyn,LIU
+Longwood,[](#f/longwood),Longwood,Longwood
+Louisiana,[](#f/louisiana),Louisiana,Louisiana
+Louisiana Tech,[](#f/louisianatech),Louisiana Tech,Louisiana Tech
+Louisville,[](#f/louisville),Louisville,Louisville
+Loyola Chicago,[](#f/loyolachicago),Loyola Chicago,Loyola Chicago
+Loyola Maryland,[](#f/loyolamaryland),Loyola-MD,Loyola MD
+Loyola Marymount,[](#f/loyolamarymount),Loyola Marymount,Loyola Marymount
+LSU,[](#f/lsu),LSU,LSU
+Maine,[](#f/maine),Maine,Maine
+Manhattan,[](#f/manhattan),Manhattan,Manhattan
+Marist,[](#f/marist),Marist,Marist
+Marquette,[](#f/marquette),Marquette,Marquette
+Marshall,[](#f/marshall),Marshall,Marshall
+Maryland,[](#f/maryland),Maryland,Maryland
+Maryland-Eastern Shore,[](#f/umes),UMES,Maryland Eastern Shore
+McNeese,[](#f/mcneese),McNeese,McNeese St.
+Memphis,[](#f/memphis),Memphis,Memphis
+Mercer,[](#f/mercer),Mercer,Mercer
+Merrimack,[](#f/merrimack),Merrimack,Merrimack
+Miami,[](#f/miami),Miami (FL),Miami FL
+Miami (OH),[](#f/miamioh),Miami (OH),Miami OH
+Michigan,[](#f/michigan),Michigan,Michigan
+Michigan State,[](#f/michiganstate),Michigan State,Michigan St.
+Middle Tennessee,[](#f/middletennessee),MT,Middle Tennessee
+Milwaukee,[](#f/milwaukee),Milwaukee,Milwaukee
+Minnesota,[](#f/minnesota),Minnesota,Minnesota
+Mississippi State,[](#f/mississippistate),Mississippi State,Mississippi St.
+Mississippi Valley State,[](#f/mvsu),Mississippi Valley State,Mississippi Valley St.
+Missouri,[](#f/missouri),Missouri,Missouri
+Missouri State,[](#f/missouristate),Missouri State,Missouri St.
+Monmouth,[](#f/monmouth),Monmouth,Monmouth
+Montana,[](#f/montana),Montana,Montana
+Montana State,[](#f/montanastate),Montana State,Montana St.
+Morehead State,[](#f/moreheadstate),Morehead State,Morehead St.
+Morgan State,[](#f/morganstate),Morgan State,Morgan St.
+Mount St. Mary's,[](#f/mountstmarys),Mt. St. Mary's,Mount St. Mary's
+Murray State,[](#f/murraystate),Murray State,Murray St.
+Navy,[](#f/navy),Navy,Navy
+NC State,[](#f/ncstate),NC State,N.C. State
+Nebraska,[](#f/nebraska),Nebraska,Nebraska
+Nevada,[](#f/nevada),Nevada,Nevada
+New Hampshire,[](#f/newhampshire),UNH,New Hampshire
+New Mexico,[](#f/newmexico),New Mexico,New Mexico
+New Mexico State,[](#f/newmexicostate),New Mexico State,New Mexico St.
+New Orleans,[](#f/neworleans),New Orleans,New Orleans
+Niagara,[](#f/niagara),Niagara,Niagara
+Nicholls,[](#f/nicholls),Nicholls State University,Nicholls St.
+NJIT,[](#f/njit),NJIT,NJIT
+Norfolk State,[](#f/norfolkstate),Norfolk State,Norfolk St.
+North Alabama,[](#f/northalabama),North Alabama,North Alabama
+North Carolina,[](#f/northcarolina),North Carolina,North Carolina
+North Carolina A&T,[](#f/northcarolinaat),NC A&T,North Carolina A&T
+North Carolina Central,[](#f/nccu),NC Central,North Carolina Central
+North Dakota,[](#f/northdakota),North Dakota,North Dakota
+North Dakota State,[](#f/northdakotastate),North Dakota State,North Dakota St.
+North Florida,[](#f/northflorida),North Florida,North Florida
+North Texas,[](#f/northtexas),North Texas,North Texas
+Northeastern,[](#f/northeastern),Northeastern,Northeastern
+Northern Arizona,[](#f/northernarizona),Northern Arizona,Northern Arizona
+Northern Colorado,[](#f/northerncolorado),Northern Colorado,Northern Colorado
+Northern Illinois,[](#f/northernillinois),Northern Illinois,Northern Illinois
+Northern Iowa,[](#f/northerniowa),Northern Iowa,Northern Iowa
+Northern Kentucky,[](#f/northernkentucky),Northern Kentucky,Northern Kentucky
+Northwestern,[](#f/northwestern),Northwestern,Northwestern
+Northwestern State,[](#f/northwesternstate),Northwestern State,Northwestern St.
+Notre Dame,[](#f/notredame),Notre Dame,Notre Dame
+Oakland,[](#f/oakland),Oakland,Oakland
+Ohio,[](#f/ohio),Ohio,Ohio
+Ohio State,[](#f/ohiostate),Ohio State,Ohio St.
+Oklahoma,[](#f/oklahoma),Oklahoma,Oklahoma
+Oklahoma State,[](#f/oklahomastate),Oklahoma State,Oklahoma St.
+Old Dominion,[](#f/olddominion),Old Dominion,Old Dominion
+Ole Miss,[](#f/olemiss),Ole Miss,Mississippi
+Omaha,[](#f/nebraskaomaha),Nebraska-Omaha,Nebraska Omaha
+Oral Roberts,[](#f/oralroberts),Oral Roberts,Oral Roberts
+Oregon,[](#f/oregon),Oregon,Oregon
+Oregon State,[](#f/oregonstate),Oregon State,Oregon St.
+Pacific,[](#f/pacific),Pacific,Pacific
+Penn State,[](#f/pennstate),Penn State,Penn St.
+Pennsylvania,[](#f/pennsylvania),Penn,Penn
+Pepperdine,[](#f/pepperdine),Pepperdine,Pepperdine
+Pittsburgh,[](#f/pittsburgh),Pitt,Pittsburgh
+Portland,[](#f/portland),Portland,Portland
+Portland State,[](#f/portlandstate),Portland State,Portland St.
+Prairie View A&M,[](#f/prairieviewam),Prairie View A&M,Prairie View A&M
+Presbyterian,[](#f/presbyterian),Presbyterian,Presbyterian
+Princeton,[](#f/princeton),Princeton,Princeton
+Providence,[](#f/providence),Providence,Providence
+Purdue,[](#f/purdue),Purdue,Purdue
+Purdue Fort Wayne,[](#f/fortwayne),Fort Wayne,Purdue Fort Wayne
+Queens University,[](#f/queensnc),,Queens
+Quinnipiac,[](#f/quinnipiac),Quinnipiac,Quinnipiac
+Radford,[](#f/radford),Radford,Radford
+Rhode Island,[](#f/rhodeisland),URI,Rhode Island
+Rice,[](#f/rice),Rice,Rice
+Richmond,[](#f/richmond),Richmond,Richmond
+Rider,[](#f/rider),Rider,Rider
+Robert Morris,[](#f/robertmorris),Robert Morris,Robert Morris
+Rutgers,[](#f/rutgers),Rutgers,Rutgers
+Sacramento State,[](#f/sacramentostate),Sacramento State,Sacramento St.
+Sacred Heart,[](#f/sacredheart),Sacred Heart,Sacred Heart
+Saint Joseph's,[](#f/stjosephspa),St. Joseph's,Saint Joseph's
+Saint Louis,[](#f/saintlouis),St. Louis,Saint Louis
+Saint Mary's,[](#f/stmarys),Saint Mary's,Saint Mary's
+Saint Peter's,[](#f/stpeters),St. Peter's,Saint Peter's
+Sam Houston,[](#f/samhoustonstate),Sam Houston State,Sam Houston St.
+Samford,[](#f/samford),Samford,Samford
+San Diego,[](#f/sandiego),San Diego,San Diego
+San Diego State,[](#f/sandiegostate),San Diego State,San Diego St.
+San Francisco,[](#f/sanfrancisco),San Francisco,San Francisco
+San José State,[](#f/sanjosestate),San Jose State,San Jose St.
+Santa Clara,[](#f/santaclara),Santa Clara,Santa Clara
+SE Louisiana,[](#f/southeasternlouisiana),Southeastern Louisiana,Southeastern Louisiana
+Seattle U,[](#f/seattle),Seattle,Seattle
+Seton Hall,[](#f/setonhall),Seton Hall,Seton Hall
+Siena,[](#f/siena),Siena,Siena
+SIU Edwardsville,[](#f/siue),SIU Edwardsville,SIU Edwardsville
+SMU,[](#f/smu),SMU,SMU
+South Alabama,[](#f/southalabama),South Alabama,South Alabama
+South Carolina,[](#f/southcarolina),South Carolina,South Carolina
+South Carolina State,[](#f/southcarolinastate),SC State,South Carolina St.
+South Carolina Upstate,[](#f/uscupstate),SC Upstate,USC Upstate
+South Dakota,[](#f/southdakota),South Dakota,South Dakota
+South Dakota State,[](#f/southdakotastate),South Dakota State,South Dakota St.
+South Florida,[](#f/usf),USF,South Florida
+Southeast Missouri State,[](#f/southeastmissouri),SE Missouri State,Southeast Missouri St.
+Southern,[](#f/southern),Southern,Southern
+Southern Illinois,[](#f/southernillinois),Southern Illinois,Southern Illinois
+Southern Indiana,[](#f/southernindiana),,Southern Indiana
+Southern Miss,[](#f/southernmiss),Southern Miss,Southern Miss
+Southern Utah,[](#f/southernutah),Southern Utah,Southern Utah
+St. Bonaventure,[](#f/stbonaventure),St. Bonaventure,St. Bonaventure
+St. Francis (PA),[](#f/stfrancis),St. Francis PA,St. Francis PA
+St. Francis Brooklyn,[](#f/stfrancisbrooklyn),St. Francis Brooklyn,St. Francis NY
+St. John's,[](#f/stjohnsny),St. John's,St. John's
+St. Thomas - Minnesota,[](#f/stthomasmn),,St. Thomas
+Stanford,[](#f/stanford),Stanford,Stanford
+Stephen F. Austin,[](#f/stephenfaustin),Stephen F. Austin,Stephen F. Austin
+Stetson,[](#f/stetson),Stetson,Stetson
+Stonehill,[](#f/stonehill),,Stonehill
+Stony Brook,[](#f/stonybrook),Stony Brook,Stony Brook
+Syracuse,[](#f/syracuse),Syracuse,Syracuse
+Tarleton,[](#f/tarletonstate),Tarleton,Tarleton St.
+TCU,[](#f/tcu),TCU,TCU
+Temple,[](#f/temple),Temple,Temple
+Tennessee,[](#f/tennessee),Tennessee,Tennessee
+Tennessee State,[](#f/tennesseestate),Tennessee State,Tennessee St.
+Tennessee Tech,[](#f/tennesseetech),Tennessee Tech,Tennessee Tech
+Texas,[](#f/texas),Texas,Texas
+Texas A&M,[](#f/texasam),Texas A&M,Texas A&M
+Texas A&M-Commerce,[](#f/texasamcommerce),,Texas A&M Commerce
+Texas A&M-Corpus Christi,[](#f/texasamcorpuschristi),Texas A&M-Corpus Christi,Texas A&M Corpus Chris
+Texas Southern,[](#f/texassouthern),Texas Southern,Texas Southern
+Texas State,[](#f/texasstate),Texas State,Texas St.
+Texas Tech,[](#f/texastech),Texas Tech,Texas Tech
+The Citadel,[](#f/citadel),The Citadel,The Citadel
+Toledo,[](#f/toledo),Toledo,Toledo
+Towson,[](#f/towson),Towson,Towson
+Troy,[](#f/troy),Troy,Troy
+Tulane,[](#f/tulane),Tulane,Tulane
+Tulsa,[](#f/tulsa),Tulsa,Tulsa
+UAB,[](#f/uab),UAB,UAB
+UC Davis,[](#f/ucdavis),UC Davis,UC Davis
+UC Irvine,[](#f/ucirvine),UC Irvine,UC Irvine
+UC Riverside,[](#f/ucriverside),UC Riverside,UC Riverside
+UC San Diego,[](#f/ucsd),UC San Diego,UC San Diego
+UC Santa Barbara,[](#f/ucsb),UC Santa Barbara,UC Santa Barbara
+UCF,[](#f/ucf),UCF,UCF
+UCLA,[](#f/ucla),UCLA,UCLA
+UConn,[](#f/connecticut),UConn,Connecticut
+UIC,[](#f/uic),UIC,Illinois Chicago
+UL Monroe,[](#f/ulm),ULM,Louisiana Monroe
+UMass,[](#f/umass),UMass,Massachusetts
+UMass Lowell,[](#f/massachusettslowell),UMass Lowell,UMass Lowell
+UMBC,[](#f/umbc),UMBC,UMBC
+UNC Asheville,[](#f/uncasheville),UNC Asheville,UNC Asheville
+UNC Greensboro,[](#f/uncgreensboro),UNC Greensboro,UNC Greensboro
+UNC Wilmington,[](#f/uncwilmington),UNC Wilmington,UNC Wilmington
+UNLV,[](#f/unlv),UNLV,UNLV
+USC,[](#f/usc),USC,USC
+UT Arlington,[](#f/utarlington),UT-Arlington,UT Arlington
+UT Martin,[](#f/utmartin),Tennessee-Martin,Tennessee Martin
+UT Rio Grande Valley,[](#f/texasriograndevalley),UTRGV,UT Rio Grande Valley
+Utah,[](#f/utah),Utah,Utah
+Utah State,[](#f/utahstate),Utah State,Utah St.
+Utah Tech,[](#f/utahtech),Dixie State,Utah Tech
+Utah Valley,[](#f/utahvalley),Utah Valley,Utah Valley
+UTEP,[](#f/utep),UTEP,UTEP
+UTSA,[](#f/utsa),UTSA,UTSA
+Valparaiso,[](#f/valparaiso),Valparaiso,Valparaiso
+Vanderbilt,[](#f/vanderbilt),Vanderbilt,Vanderbilt
+VCU,[](#f/vcu),VCU,VCU
+Vermont,[](#f/vermont),UVM,Vermont
+Villanova,[](#f/villanova),Villanova,Villanova
+Virginia,[](#f/virginia),Virginia,Virginia
+Virginia Tech,[](#f/virginiatech),Virginia Tech,Virginia Tech
+VMI,[](#f/vmi),VMI,VMI
+Wagner,[](#f/wagner),Wagner,Wagner
+Wake Forest,[](#f/wakeforest),Wake Forest,Wake Forest
+Washington,[](#f/washington),Washington,Washington
+Washington State,[](#f/washingtonstate),Washington State,Washington St.
+Weber State,[](#f/weberstate),Weber State,Weber St.
+West Virginia,[](#f/westvirginia),West Virginia,West Virginia
+Western Carolina,[](#f/westerncarolina),Western Carolina,Western Carolina
+Western Illinois,[](#f/westernillinois),Western Illinois,Western Illinois
+Western Kentucky,[](#f/wku),Western Kentucky,Western Kentucky
+Western Michigan,[](#f/westernmichigan),Western Michigan,Western Michigan
+Wichita State,[](#f/wichitastate),Wichita State,Wichita St.
+William & Mary,[](#f/williammary),William & Mary,William & Mary
+Winthrop,[](#f/winthrop),Winthrop,Winthrop
+Wisconsin,[](#f/wisconsin),Wisconsin,Wisconsin
+Wofford,[](#f/wofford),Wofford,Wofford
+Wright State,[](#f/wrightstate),Wright State,Wright St.
+Wyoming,[](#f/wyoming),Wyoming,Wyoming
+Xavier,[](#f/xavier),Xavier,Xavier
+Yale,[](#f/yale),Yale,Yale
+Youngstown State,[](#f/youngstownstate),Youngstown State,Youngstown St.
