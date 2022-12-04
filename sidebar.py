@@ -129,22 +129,16 @@ def nond1list(team):
     with open('cbbscorebot/nond1_list.txt','a',newline='') as out_file:
         out_file.write(team + '\n')
 
-def pulljson():
+def loaddata():
+    # Load data
     try:
-        req = Request("https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=" + str(time.time()) + "&groups=50")
-        req.headers["User-Agent"] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1309.0 Safari/537.17'
+        url="https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=" + datetime.datetime.now().strftime('%Y%m%d') + "&groups=50&limit=357"
+        obj = requests.get(url)
+        scoreData = json.loads(obj.content)
     except:
         print("Failed to Pull ESPN json file")
         raise
-	
-    return req
-
-def loaddata():
-    # Load data
-    url="https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=" + datetime.datetime.now().strftime('%Y%m%d') + "&groups=50"
-    obj = requests.get(url)
-    scoreData = json.loads(obj.content)
-	
+    
     return scoreData
 
 def parsevent(event):
@@ -296,7 +290,6 @@ def updateschedule(r):
     import scorebot_config
 
     #Scrape and Load Data from ESPN
-    #req = pulljson()
     scoreData = loaddata()
 
     #Initilize Strings
