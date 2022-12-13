@@ -1,43 +1,43 @@
-Abilene Christian,[Abilene Christian](#f/abilenechristian),Abilene Christian,Abilene Christian
-Air Force,[Air Force](#f/airforce),Air Force,Air Force
-Akron,[Akron](#f/akron),Akron,Akron
-Alabama,[Alabama](#f/alabama),Alabama,Alabama
-Alabama A&M,[Alabama A&M](#f/alabamaam),Alabama A & M,Alabama A&M
-Alabama State,[Alabama State](#f/alabamastate),Alabama State,Alabama St.
-Albany,[Albany](#f/albany),Albany,Albany
-Alcorn State,[Alcorn State](#f/alcornstate),Alcorn State,Alcorn St.
-American University,[American University](#f/american),American,American
-Appalachian State,[Appalachian State](#f/appalachianstate),Appalachian State,Appalachian St.
-Arizona,[Arizona](#f/arizona),Arizona,Arizona
-Arizona State,[Arizona State](#f/arizonastate),Arizona State,Arizona St.
-Arkansas,[Arkansas](#f/arkansas),Arkansas,Arkansas
-Arkansas State,[Arkansas State](#f/arkansasstate),Arkansas State,Arkansas St.
-Arkansas-Pine Bluff,[UAPB](#f/uapb),Arkansas-Pine Bluff,Arkansas Pine Bluff
-Army,[Army](#f/army),Army,Army
-Auburn,[Auburn](#f/auburn),Auburn,Auburn
-Austin Peay,[Austin Peay](#f/austinpeay),Austin Peay,Austin Peay
-Ball State,[Ball State](#f/ballstate),Ball State,Ball St.
-Baylor,[Baylor](#f/baylor),Baylor,Baylor
-Bellarmine,[Bellarmine](#f/bellarmine),Bellarmine,Bellarmine
-Belmont,[Belmont](#f/belmont),Belmont,Belmont
-Bethune-Cookman,[Bethune-Cookman](#f/bethunecookman),Bethune Cookman,Bethune Cookman
-Binghamton,[Binghamton](#f/binghamton),Binghamton,Binghamton
-Boise State,[Boise State](#f/boisestate),Boise State,Boise St.
-Boston College,[Boston College](#f/bostoncollege),BC,Boston College
-Boston University,[Boston University](#f/bostonuniversity),BU,Boston University
-Bowling Green,[Bowling Green](#f/bowlinggreen),Bowling Green,Bowling Green
-Bradley,[Bradley](#f/bradley),Bradley,Bradley
-Brown,[Brown](#f/brown),Brown,Brown
-Bryant,[Bryant](#f/bryant),Bryant,Bryant
-Bucknell,[Bucknell](#f/bucknell),Bucknell,Bucknell
-Buffalo,[Buffalo](#f/buffalo),Buffalo,Buffalo
-Butler,[Butler](#f/butler),Butler,Butler
-BYU,[BYU](#f/byu),BYU,BYU
-Cal Poly,[Cal Poly](#f/calpoly),Cal Poly,Cal Poly
-Cal State Bakersfield,[CSU Bakersfield](#f/csubakersfield),Cal State Bakersfield,Cal St. Bakersfield
-Cal State Fullerton,[Cal State Fullerton](#f/csufullerton),Cal State Fullerton,Cal St. Fullerton
-Cal State Northridge,[CSUN](#f/csunorthridge),Cal State Northridge,Cal St. Northridge
-California,[California](#f/california),California,California
+Abilene Christian,[](#f/abilenechristian),Abilene Christian,Abilene Christian
+Air Force,[](#f/airforce),Air Force,Air Force
+Akron,[](#f/akron),Akron,Akron
+Alabama,[](#f/alabama),Alabama,Alabama
+Alabama A&M,[](#f/alabamaam),Alabama A & M,Alabama A&M
+Alabama State,[](#f/alabamastate),Alabama State,Alabama St.
+Albany,[](#f/albany),Albany,Albany
+Alcorn State,[](#f/alcornstate),Alcorn State,Alcorn St.
+American University,[](#f/american),American,American
+Appalachian State,[](#f/appalachianstate),Appalachian State,Appalachian St.
+Arizona,[](#f/arizona),Arizona,Arizona
+Arizona State,[](#f/arizonastate),Arizona State,Arizona St.
+Arkansas,[](#f/arkansas),Arkansas,Arkansas
+Arkansas State,[](#f/arkansasstate),Arkansas State,Arkansas St.
+Arkansas-Pine Bluff,[](#f/uapb),Arkansas-Pine Bluff,Arkansas Pine Bluff
+Army,[](#f/army),Army,Army
+Auburn,[](#f/auburn),Auburn,Auburn
+Austin Peay,[](#f/austinpeay),Austin Peay,Austin Peay
+Ball State,[](#f/ballstate),Ball State,Ball St.
+Baylor,[](#f/baylor),Baylor,Baylor
+Bellarmine,[](#f/bellarmine),Bellarmine,Bellarmine
+Belmont,[](#f/belmont),Belmont,Belmont
+Bethune-Cookman,[](#f/bethunecookman),Bethune Cookman,Bethune Cookman
+Binghamton,[](#f/binghamton),Binghamton,Binghamton
+Boise State,[](#f/boisestate),Boise State,Boise St.
+Boston College,[](#f/bostoncollege),BC,Boston College
+Boston University,[](#f/bostonuniversity),BU,Boston University
+Bowling Green,[](#f/bowlinggreen),Bowling Green,Bowling Green
+Bradley,[](#f/bradley),Bradley,Bradley
+Brown,[](#f/brown),Brown,Brown
+Bryant,[](#f/bryant),Bryant,Bryant
+Bucknell,[](#f/bucknell),Bucknell,Bucknell
+Buffalo,[](#f/buffalo),Buffalo,Buffalo
+Butler,[](#f/butler),Butler,Butler
+BYU,[](#f/byu),BYU,BYU
+Cal Poly,[](#f/calpoly),Cal Poly,Cal Poly
+Cal State Bakersfield,[](#f/csubakersfield),Cal State Bakersfield,Cal St. Bakersfield
+Cal State Fullerton,[](#f/csufullerton),Cal State Fullerton,Cal St. Fullerton
+Cal State Northridge,[](#f/csunorthridge),Cal State Northridge,Cal St. Northridge
+California,[](#f/california),California,California
 California Baptist,[](#f/californiabaptist),Cal Baptist,Cal Baptist
 Campbell,[](#f/campbell),Campbell,Campbell
 Canisius,[](#f/canisius),Canisius,Canisius
