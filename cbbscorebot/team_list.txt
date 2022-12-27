@@ -44,7 +44,7 @@ Canisius,[](#f/canisius),Canisius,Canisius
 Central Arkansas,[](#f/centralarkansas),University of Central Arkansas,Central Arkansas
 Central Connecticut,[](#f/ccsu),Central Connecticut State,Central Connecticut
 Central Michigan,[](#f/centralmichigan),Central Michigan,Central Michigan
-Charleston,[](#f/collegecharleston),College of Charleston,Charleston
+Charleston,[](#f/collegecharleston),Charleston,Charleston
 Charleston Southern,[](#f/charlestonsouthern),Charleston Southern,Charleston Southern
 Charlotte,[](#f/charlotte),Charlotte,Charlotte
 Chattanooga,[](#f/chattanooga),Chattanooga,Chattanooga

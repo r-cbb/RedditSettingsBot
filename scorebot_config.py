@@ -14,7 +14,7 @@ PreTop25 = """ | | | | | | | | | |
 ###[Follow us on Twitter](https://twitter.com/redditCBB) [](#l/twitter)
 | | | | |
 :--:|:--:|:---|:---
-[User Poll](http://cbbpoll.com/)|
+[Userpoll](http://cbbpoll.net/)|
 Rank||Team (FPV)|Score"""
 
 # This is just a writer for the Sidebar Schedule.
@@ -58,7 +58,6 @@ PostTop25Header = """
 
 ##Related Subreddits##
 #[Specific Schools/Conferences](/r/CollegeBasketball/wiki/relatedsubreddits)
-#/r/ncaaBballstreams  
 #/r/sports  
 #/r/nba  
 #/r/wnba  
@@ -72,11 +71,11 @@ PostTop25Header = """
 #/r/HSbball"""
 
 # All Media flairs can be found here.
-tv_flairs={'BTN':'[](#l/btn)','CBS':'[](#l/cbs)','CBSSN':'[](#l/cbssn)','ESPN':'[](#l/espn)','ESPN2':'[](#l/espn2)','ESPN3':'[](#l/espn3)','ESPNU':'[](#l/espnu)','ESPNN':'[](#l/espnews)','FOX':'[](#l/fox)','FS1':'[](#l/fs1)','FS2':'[](#l/fs2)','FSN':'[](#l/fsn)','Longhorn Network':'[](#l/lhn)','NBC':'[](#l/nbc)','NBCSN':'[](#l/nbcsn)','PAC12':'[](#l/p12n)','SECN':'[](#l/secn)','SECN+':'[](#l/secn)','TBS':'[](#l/tbs)','TNT':'[](#l/tnt)','truTV':'[](#l/trutv)','ACCNE':'[](#l/accne)'}
+tv_flairs = {'BTN':'[](#l/btn)', 'CBS':'[](#l/cbs)', 'CBSSN':'[](#l/cbssn)', 'ESPN':'[](#l/espn)', 'ESPN2':'[](#l/espn2)', 'ESPN3':'[](#l/espn3)', 'ESPNU':'[](#l/espnu)', 'FOX':'[](#l/fox)', 'FS1':'[](#l/fs1)', 'FSN':'[](#l/fsn)', 'LHN':'[](#l/lhn)', 'NBC':'[](#l/nbc)', 'NBCSN':'[](#l/nbcsn)', 'PAC12':'[](#l/p12n)', 'SECN':'[](#l/secn)', 'TBS':'[](#l/tbs)', 'TNT':'[](#l/tnt)', 'truTV':'[](#l/trutv)', 'ACCN':'[](#l/accn)', 'ACCNE':'[](#l/accne)', 'ACCNX':'[](#l/accne)', 'ESPNN':'[](#l/espnews)', 'FS2':'[](#l/fs2)', 'ABC':'[](#l/abc)', 'ESPN+':'[](#l/espnplus)', 'BIG12|ESPN+': '[](#l/espnplus)'}
 
 # Custom Top 25 Bar strings here.
-top25barflag = 0 # 0 uses top 25 scraped from cbbpoll.com, 1 uses days till tipoff, 2 uses days,hours till tipoff, 3 uses custom string below
-top25customstring = "####Wear a Mask! \n"
+top25barflag = 0 # 0 uses top 25 scraped from cbbpoll.net, 1 uses days till tipoff, 2 uses days,hours till tipoff, 3 uses custom string below
+top25customstring = "#### [](#f/houston) [](#f/texas) [](#f/kansas) [](#f/northcarolina) [](#f/virginia) [](#f/gonzaga) [](#f/baylor) [](#f/arkansas) [](#f/duke) [](#f/indiana) [](#f/creighton) [](#f/arizona) [](#f/michiganstate) [](#f/kentucky) [](#f/illinois) [](#f/sandiegostate) [](#f/auburn) [](#f/alabama) [](#f/ucla) [](#f/connecticut) [](#f/texastech) [](#f/maryland) [](#f/stmarys) [](#f/iowa) [](#f/tennessee)\n"
 
 #Change the max length of the schedule.  6250 leaves ~50 characters for use.  
 maxlength = 6250
