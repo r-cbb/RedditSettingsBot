@@ -1,25 +1,25 @@
-#1|[](#f/gonzaga)|Gonzaga (59)|2027
-#2|[](#f/baylor)|Baylor (23)|1991
-#3|[](#f/michigan)|Michigan |1876
-#4|[](#f/ohiostate)|Ohio State |1730
-#5|[](#f/villanova)|Villanova |1632
-#6|[](#f/illinois)|Illinois |1563
-#7|[](#f/houston)|Houston |1392
-#8|[](#f/texastech)|Texas Tech |1347
-#9|[](#f/virginia)|Virginia |1224
-#10|[](#f/missouri)|Missouri |1220
-#11|[](#f/alabama)|Alabama |1152
-#12|[](#f/westvirginia)|West Virginia |1114
-#13|[](#f/texas)|Texas |1083
-#14|[](#f/oklahoma)|Oklahoma |1011
-#15|[](#f/iowa)|Iowa |924
-#16|[](#f/tennessee)|Tennessee |814
-#17|[](#f/floridastate)|Florida State |757
-#18|[](#f/usc)|USC |685
-#19|[](#f/virginiatech)|Virginia Tech |526
-#20|[](#f/creighton)|Creighton |495
-#21|[](#f/wisconsin)|Wisconsin |456
-#22|[](#f/oklahomastate)|Oklahoma State |311
-#23|[](#f/loyolachicago)|Loyola Chicago |254
-#24|[](#f/xavier)|Xavier |203
-#25|[](#f/purdue)|Purdue |145
+#1|[](#f/connecticut)|UConn (63)|2195
+#2|[](#f/purdue)|Purdue (22)|2135
+#3|[](#f/houston)|Houston (3)|2001
+#4|[](#f/kansas)|Kansas (1)|1927
+#5|[](#f/arizona)|Arizona |1852
+#6|[](#f/texas)|Texas |1568
+#7|[](#f/alabama)|Alabama |1540
+#8|[](#f/ucla)|UCLA |1534
+#9|[](#f/tennessee)|Tennessee |1513
+#10|[](#f/arkansas)|Arkansas |1465
+#11|[](#f/gonzaga)|Gonzaga |1321
+#12|[](#f/virginia)|Virginia |1288
+#13|[](#f/baylor)|Baylor |1198
+#14|[](#f/miami)|Miami (FL) |877
+#15|[](#f/duke)|Duke |784
+#16|[](#f/wisconsin)|Wisconsin |741
+#17|[](#f/newmexico)|New Mexico |559
+#18|[](#f/kentucky)|Kentucky |523
+#19|[](#f/indiana)|Indiana |497
+#20|[](#f/westvirginia)|West Virginia |435
+#21|[](#f/tcu)|TCU |409
+#22|[](#f/auburn)|Auburn |266
+#23|[](#f/xavier)|Xavier |215
+#24|[](#f/mississippistate)|Mississippi State |206
+#25|[](#f/collegecharleston)|Charleston |194
