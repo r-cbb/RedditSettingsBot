@@ -249,7 +249,7 @@ Saint Joseph's,[](#f/stjosephspa),St. Joseph's,Saint Joseph's
 Saint Louis,[](#f/saintlouis),St. Louis,Saint Louis
 Saint Mary's,[](#f/stmarys),Saint Mary's,Saint Mary's
 Saint Peter's,[](#f/stpeters),St. Peter's,Saint Peter's
-Sam Houston,[](#f/samhoustonstate),Sam Houston State,Sam Houston St.
+Sam Houston,[](#f/samhoustonstate),Sam Houston,Sam Houston St.
 Samford,[](#f/samford),Samford,Samford
 San Diego,[](#f/sandiego),San Diego,San Diego
 San Diego State,[](#f/sandiegostate),San Diego State,San Diego St.

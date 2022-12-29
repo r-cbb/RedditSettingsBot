@@ -1,7 +1,6 @@
 from urllib.request import urlopen, Request
 import requests
 import json
-import time
 import datetime
 import html
 import re
@@ -12,16 +11,10 @@ MODE_INACTIVE = 1
 GAME_STATUS_PRE = 0
 GAME_STATUS_IN = 1
 GAME_STATUS_POST = 2
+
+SUBREDDIT = 'collegebasketball'
 	
 
-def scriptlogin():
-    try:
-        r = reddit_login.login()
-        return r
-    except:
-        print("Failed to Login")
-        raise
-	
 def get_teams():
     try:
         with open('cbbscorebot/team_list.txt','r') as imp_file:
@@ -102,7 +95,7 @@ def getheaderrankingslist():
 		
 def createconfigfile(r):
     try:
-        wikipage = r.subreddit('collegebasketball').wiki['config_scorebot']
+        wikipage = r.subreddit(SUBREDDIT).wiki['config_scorebot']
     
         with open('scorebot_config.py','w',newline='') as out_file:
             for line in wikipage.content_md:
@@ -361,7 +354,7 @@ def timetoseason(top25barflag):
     return returnstring
 
 def updatesidebar():
-    r = scriptlogin()
+    r = reddit_login.scriptlogin(1)
     createconfigfile(r)
     import scorebot_config
 
@@ -372,11 +365,11 @@ def updatesidebar():
     else:
         sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + updateschedule(r) +  scorebot_config.top25customstring + scorebot_config.PostTop25Header
 
-    settings=r.subreddit('collegebasketball').mod.settings()
+    settings=r.subreddit(SUBREDDIT).mod.settings()
 
     if sidebarstring != settings["description"]:
         print('Does Not Equal, Resetting')
-        r.subreddit('collegebasketball').mod.update(description=sidebarstring)
+        r.subreddit(SUBREDDIT).mod.update(description=sidebarstring)
     else:
         print('Doing Nothing, As they are the same')
 	
