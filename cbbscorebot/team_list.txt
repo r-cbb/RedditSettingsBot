@@ -23,7 +23,7 @@ Belmont,[](#f/belmont),Belmont,Belmont
 Bethune-Cookman,[](#f/bethunecookman),Bethune Cookman,Bethune Cookman
 Binghamton,[](#f/binghamton),Binghamton,Binghamton
 Boise State,[](#f/boisestate),Boise State,Boise St.
-Boston College,[](#f/bostoncollege),BC,Boston College
+Boston College,[](#f/bostoncollege),Boston College,Boston College
 Boston University,[](#f/bostonuniversity),BU,Boston University
 Bowling Green,[](#f/bowlinggreen),Bowling Green,Bowling Green
 Bradley,[](#f/bradley),Bradley,Bradley
@@ -233,7 +233,7 @@ Presbyterian,[](#f/presbyterian),Presbyterian,Presbyterian
 Princeton,[](#f/princeton),Princeton,Princeton
 Providence,[](#f/providence),Providence,Providence
 Purdue,[](#f/purdue),Purdue,Purdue
-Purdue Fort Wayne,[](#f/fortwayne),Fort Wayne,Purdue Fort Wayne
+Purdue Fort Wayne,[](#f/fortwayne),Purdue Fort Wayne,Purdue Fort Wayne
 Queens University,[](#f/queensnc),,Queens
 Quinnipiac,[](#f/quinnipiac),Quinnipiac,Quinnipiac
 Radford,[](#f/radford),Radford,Radford
