@@ -72,3 +72,10 @@ def PostPoll():
     submission.mod.distinguish(how='yes')
     submission.mod.ignore_reports()
     submission.mod.approve()
+    
+try:
+    PostPoll()
+except:
+    print("Failed to Post Poll")
+    quit()
+quit()
