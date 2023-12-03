@@ -3,7 +3,7 @@ chardet==5.1.0
 charset-normalizer==2.1.1
 fake-useragent==1.1.1
 idna==3.4
-praw==7.6.1
+praw==7.7.1
 prawcore==2.3.0
 requests==2.31.0
 update-checker==0.18.0
