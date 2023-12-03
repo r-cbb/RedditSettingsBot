@@ -19,6 +19,10 @@ def get_rcbb_poll():
         
         teamstring = team.replace('&amp;','&')
         
+        #Handle Hawaii Strings from cbbpoll.net
+        if teamstring == "Hawaiʻi" or teamstring == "HawaiÊ»i":
+            teamstring = "Hawaii"
+        
         ranking.append("#"+str(int(team_rank))+"|"+flairs[rank_names[teamstring]]+"|"+team.replace('&amp;','&')+" "+team_fpv+"|"+str(int(team_vote)))
         headerranking.append(flairs[rank_names[teamstring]])
             
@@ -39,4 +43,3 @@ except:
     print("Failed to Pull cbb poll")
     quit()
 quit()
-

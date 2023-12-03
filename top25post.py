@@ -24,6 +24,10 @@ def parse_rcbb_poll():
         
         teamstring = team.replace('&amp;','&')
         
+        #Handle Hawaii Strings from cbbpoll.net
+        if teamstring == "Hawaiʻi" or teamstring == "HawaiÊ»i":
+            teamstring = "Hawaii"
+        
         if team_rank <= 25:
             ranking.append("#"+str(int(team_rank))+"|"+flairs[rank_names[teamstring]]+"|"+team.replace('&amp;','&')+" "+team_fpv+"|"+str(int(team_vote)))
         else:
@@ -42,24 +46,6 @@ def parse_rcbb_poll():
             receivingvotesstring = receivingvotesstring + ", "
         
     return top25string, receivingvotesstring, currentweek
-
-def parse_rcbb_poll_test():
-    flairs_temp,rank_names_temp,cbbnames=cbbpolldata.get_teams_test()
-    (flairs,rank_names)=flairs_temp,rank_names_temp
-
-    ranking,receivingvotes=[],[]
-
-    print(flairs)
-    print(rank_names)
-
-    for i in cbbnames:        
-        i = i.replace('&amp;','&')
-        
-        print(i)
-        print(flairs[rank_names[i]])
-        
-    exit()
-
         
 def createPostText():
 
@@ -82,5 +68,7 @@ def PostPoll():
     r = reddit_login.scriptlogin(2)
     
     submission = r.subreddit(SUBREDDIT).submit(title=posttitle,selftext=posttext)
-
-    
+    submission.mod.sticky(bottom=True,state=True)    
+    submission.mod.distinguish(how='yes')
+    submission.mod.ignore_reports()
+    submission.mod.approve()
