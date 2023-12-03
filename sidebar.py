@@ -1,7 +1,6 @@
 from urllib.request import urlopen, Request
 import requests
 import json
-import time
 import datetime
 import html
 import re
@@ -12,19 +11,13 @@ MODE_INACTIVE = 1
 GAME_STATUS_PRE = 0
 GAME_STATUS_IN = 1
 GAME_STATUS_POST = 2
+
+SUBREDDIT = 'collegebasketball'
 	
 
-def scriptlogin():
-    try:
-        r = reddit_login.login()
-        return r
-    except:
-        print("Failed to Login")
-        raise
-	
 def get_teams():
     try:
-        with open('cbbscorebot/team_list.txt','r') as imp_file:
+        with open('data/team_list.txt','r') as imp_file:
             lines=imp_file.readlines()
         flairs={}
         rank_names={}
@@ -57,7 +50,7 @@ def get_gamethreads(r):
 
 def getrankings():
     try:
-        with open('cbbscorebot/ranking.txt','r') as imp_file:
+        with open('data/ranking.txt','r') as imp_file:
             lines=imp_file.readlines()
         sidebarrankings='\n'
         for line in lines:
@@ -69,7 +62,7 @@ def getrankings():
 		
 def getheaderrankings():
     try:
-        with open('cbbscorebot/headerranking.txt','r') as imp_file:
+        with open('data/headerranking.txt','r') as imp_file:
             lines=imp_file.readlines()
         headerranking='#### '
         for line in lines:
@@ -81,7 +74,7 @@ def getheaderrankings():
 	
 def getheaderrankingslist():
     try:
-        with open('cbbscorebot/headerranking.txt','r') as imp_file:
+        with open('data/headerranking.txt','r') as imp_file:
             lines=imp_file.readlines()
         flairs = lines[0].split(' ')
         ranking = []
@@ -102,7 +95,7 @@ def getheaderrankingslist():
 		
 def createconfigfile(r):
     try:
-        wikipage = r.subreddit('collegebasketball').wiki['config_scorebot']
+        wikipage = r.subreddit(SUBREDDIT).wiki['config_scorebot']
     
         with open('scorebot_config.py','w',newline='') as out_file:
             for line in wikipage.content_md:
@@ -126,7 +119,7 @@ def setteamflair(team, teams, teamranking, teamflag):
     return teamflair, teamflag
 
 def nond1list(team):
-    with open('cbbscorebot/nond1_list.txt','a',newline='') as out_file:
+    with open('data/nond1_list.txt','a',newline='') as out_file:
         out_file.write(team + '\n')
 
 def loaddata():
@@ -342,7 +335,10 @@ def updateschedule(r):
         allgamestr = restgamestr
 
     if len(allgamestr)-len([m.start() for m in re.finditer('\n',allgamestr)]) > scorebot_config.maxlength:
-        allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr + "---- | **Has** | **Game** | **Thread** | ---- \n" + hasgamethreadstr
+        if hasgamethreadstr == '':
+            allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr
+        else:
+            allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr + "---- | **Has** | **Game** | **Thread** | ---- \n" + hasgamethreadstr
         if len(allgamestr)-len([m.start() for m in re.finditer('\n',allgamestr)]) > scorebot_config.maxlength:
             allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr
         
@@ -361,10 +357,12 @@ def timetoseason(top25barflag):
     return returnstring
 
 def updatesidebar():
-    r = scriptlogin()
+    r = reddit_login.scriptlogin(1)
     createconfigfile(r)
     import scorebot_config
 
+    
+    #0 uses top 25 scraped from cbbpoll.net, 1 uses days till tipoff, 2 uses days,hours till tipoff, 3 uses custom string (else)
     if scorebot_config.top25barflag == 0:
         sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + updateschedule(r) + getheaderrankings() + scorebot_config.PostTop25Header
     elif scorebot_config.top25barflag == 1 or scorebot_config.top25barflag == 2:
@@ -372,11 +370,11 @@ def updatesidebar():
     else:
         sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + updateschedule(r) +  scorebot_config.top25customstring + scorebot_config.PostTop25Header
 
-    settings=r.subreddit('collegebasketball').mod.settings()
+    settings=r.subreddit(SUBREDDIT).mod.settings()
 
     if sidebarstring != settings["description"]:
         print('Does Not Equal, Resetting')
-        r.subreddit('collegebasketball').mod.update(description=sidebarstring)
+        r.subreddit(SUBREDDIT).mod.update(description=sidebarstring)
     else:
         print('Doing Nothing, As they are the same')
 	

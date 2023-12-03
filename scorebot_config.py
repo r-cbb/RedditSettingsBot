@@ -75,7 +75,6 @@ tv_flairs = {'BTN':'[](#l/btn)', 'CBS':'[](#l/cbs)', 'CBSSN':'[](#l/cbssn)', 'ES
 
 # Custom Top 25 Bar strings here.
 top25barflag = 0 # 0 uses top 25 scraped from cbbpoll.net, 1 uses days till tipoff, 2 uses days,hours till tipoff, 3 uses custom string below
-top25customstring = "#### [](#f/houston) [](#f/texas) [](#f/kansas) [](#f/northcarolina) [](#f/virginia) [](#f/gonzaga) [](#f/baylor) [](#f/arkansas) [](#f/duke) [](#f/indiana) [](#f/creighton) [](#f/arizona) [](#f/michiganstate) [](#f/kentucky) [](#f/illinois) [](#f/sandiegostate) [](#f/auburn) [](#f/alabama) [](#f/ucla) [](#f/connecticut) [](#f/texastech) [](#f/maryland) [](#f/stmarys) [](#f/iowa) [](#f/tennessee)\n"
-
+top25customstring = "#### [](#f/kansas) [](#f/purdue) [](#f/duke) [](#f/connecticut) [](#f/houston) [](#f/michiganstate) [](#f/marquette) [](#f/creighton) [](#f/tennessee) [](#f/gonzaga) [](#f/arizona) [](#f/fau) [](#f/arkansas) [](#f/texas) [](#f/texasam) [](#f/miami) [](#f/baylor) [](#f/kentucky) [](#f/sandiegostate) [](#f/northcarolina) [](#f/alabama) [](#f/stmarys) [](#f/usc) [](#f/villanova) [](#f/illinois)\n"
 #Change the max length of the schedule.  6250 leaves ~50 characters for use.  
 maxlength = 6250
