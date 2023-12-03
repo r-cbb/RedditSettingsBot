@@ -18,11 +18,7 @@ def get_rcbb_poll():
             team_fpv = "("+str(top25rank[i]['firstPlaceVotes'])+")"
         
         teamstring = team.replace('&amp;','&')
-                
-        #Handle Hawaii Strings from cbbpoll.net
-        if teamstring == "Hawaiʻi":
-            teamstring = "Hawaii"
-                
+        
         ranking.append("#"+str(int(team_rank))+"|"+flairs[rank_names[teamstring]]+"|"+team.replace('&amp;','&')+" "+team_fpv+"|"+str(int(team_vote)))
         headerranking.append(flairs[rank_names[teamstring]])
             

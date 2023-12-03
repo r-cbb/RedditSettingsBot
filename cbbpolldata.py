@@ -13,6 +13,20 @@ def get_teams():
         rank_names[rank_name]=team
     return flairs,rank_names
 
+def get_teams_test():
+    with open('cbbscorebot/team_list.txt','r') as imp_file:
+        lines=imp_file.readlines()
+    flairs={}
+    rank_names={}
+    rank_names_temp=[]
+    for line in lines:
+        (team,flair,rank_name,kenpom)=line.replace('\n','').split(',')
+        flairs[team]=flair
+        rank_names[rank_name]=team
+        rank_names_temp.append(rank_name)
+    print(rank_name)
+    return flairs,rank_names,rank_names_temp
+
 #Request Webpage
 def webrequest():
     try:

@@ -1,25 +1,25 @@
-#1|[](#f/kansas)|Kansas (64)|2824
-#2|[](#f/purdue)|Purdue (28)|2741
-#3|[](#f/arizona)|Arizona (14)|2610
-#4|[](#f/connecticut)|UConn (8)|2479
-#5|[](#f/houston)|Houston (2)|2431
-#6|[](#f/marquette)|Marquette |2367
-#7|[](#f/tennessee)|Tennessee |2149
-#8|[](#f/creighton)|Creighton (1)|2148
-#9|[](#f/duke)|Duke |1810
-#10|[](#f/gonzaga)|Gonzaga |1733
-#11|[](#f/baylor)|Baylor |1602
-#12|[](#f/texasam)|Texas A&M |1585
-#13|[](#f/miami)|Miami (FL) |1419
-#14|[](#f/alabama)|Alabama |1318
-#15|[](#f/kentucky)|Kentucky |1089
-#16|[](#f/northcarolina)|North Carolina |962
-#17|[](#f/texas)|Texas |849
-#18|[](#f/virginia)|Virginia |685
-#19|[](#f/mississippistate)|Mississippi State |583
-#20|[](#f/memphis)|Memphis |520
-#21|[](#f/byu)|BYU |504
-#22|[](#f/iowastate)|Iowa State |461
-#23|[](#f/colorado)|Colorado |417
-#24|[](#f/jamesmadison)|James Madison |308
-#25|[](#f/michiganstate)|Michigan State |248
+#1|[](#f/purdue)|Purdue (109)|2892
+#2|[](#f/arizona)|Arizona (1)|2677
+#3|[](#f/marquette)|Marquette |2569
+#4|[](#f/connecticut)|UConn (5)|2555
+#5|[](#f/houston)|Houston (1)|2429
+#6|[](#f/kansas)|Kansas |2316
+#7|[](#f/baylor)|Baylor |1966
+#8|[](#f/duke)|Duke |1848
+#9|[](#f/gonzaga)|Gonzaga |1767
+#10|[](#f/miami)|Miami (FL) |1658
+#11|[](#f/tennessee)|Tennessee |1558
+#12|[](#f/kentucky)|Kentucky |1194
+#13|[](#f/villanova)|Villanova |1141
+#14|[](#f/byu)|BYU |1110
+#15|[](#f/texasam)|Texas A&M |1098
+#16|[](#f/fau)|Florida Atlantic |1002
+#17|[](#f/creighton)|Creighton |957
+#18|[](#f/northcarolina)|North Carolina |881
+#19|[](#f/coloradostate)|Colorado State |841
+#20|[](#f/mississippistate)|Mississippi State |837
+#21|[](#f/texas)|Texas |597
+#22|[](#f/oklahoma)|Oklahoma |538
+#23|[](#f/alabama)|Alabama |534
+#24|[](#f/jamesmadison)|James Madison |449
+#25|[](#f/sandiegostate)|San Diego State |284

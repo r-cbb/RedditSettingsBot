@@ -335,7 +335,10 @@ def updateschedule(r):
         allgamestr = restgamestr
 
     if len(allgamestr)-len([m.start() for m in re.finditer('\n',allgamestr)]) > scorebot_config.maxlength:
-        allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr + "---- | **Has** | **Game** | **Thread** | ---- \n" + hasgamethreadstr
+        if hasgamethreadstr == '':
+            allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr
+        else:
+            allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr + "---- | **Has** | **Game** | **Thread** | ---- \n" + hasgamethreadstr
         if len(allgamestr)-len([m.start() for m in re.finditer('\n',allgamestr)]) > scorebot_config.maxlength:
             allgamestr = " ---- | **Ranked** | **Games** | ---- | ----  \n" + top25gamestr
         
@@ -358,6 +361,8 @@ def updatesidebar():
     createconfigfile(r)
     import scorebot_config
 
+    
+    #0 uses top 25 scraped from cbbpoll.net, 1 uses days till tipoff, 2 uses days,hours till tipoff, 3 uses custom string (else)
     if scorebot_config.top25barflag == 0:
         sidebarstring = scorebot_config.PreTop25 + getrankings() + scorebot_config.BetweenTop25andSchedule + updateschedule(r) + getheaderrankings() + scorebot_config.PostTop25Header
     elif scorebot_config.top25barflag == 1 or scorebot_config.top25barflag == 2:
