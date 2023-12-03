@@ -16,7 +16,7 @@ def scriptlogin():
 	
 def get_teams():
 	try:
-		with open('cbbscorebot/team_list.txt','r') as imp_file:
+		with open('data/team_list.txt','r') as imp_file:
 			lines=imp_file.readlines()
 		flairs={}
 		rank_names={}
@@ -50,7 +50,7 @@ def get_gamethreads(r):
 
 def getrankings():
 	try:
-		with open('cbbscorebot/ranking.txt','r') as imp_file:
+		with open('data/ranking.txt','r') as imp_file:
 			lines=imp_file.readlines()
 		sidebarrankings='\n'
 		for line in lines:
@@ -62,7 +62,7 @@ def getrankings():
 		
 def getheaderrankings():
 	try:
-		with open('cbbscorebot/headerranking.txt','r') as imp_file:
+		with open('data/headerranking.txt','r') as imp_file:
 			lines=imp_file.readlines()
 		headerranking='#### '
 		for line in lines:
@@ -74,8 +74,8 @@ def getheaderrankings():
 	
 def getheaderrankingslist():
 	try:
-		# with open('cbbscorebot/headerranking.txt','r') as imp_file:
-		with open('cbbscorebot/headerranking_tournament.txt','r') as imp_file:
+		# with open('data/headerranking.txt','r') as imp_file:
+		with open('data/headerranking_tournament.txt','r') as imp_file:
 			lines=imp_file.readlines()
 		flairs = lines[0].split(' ')
 		ranking = []

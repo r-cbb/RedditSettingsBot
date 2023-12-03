@@ -3,7 +3,7 @@ import json
 
 #Get Team List of current active teams.  cbbpoll.net, espn, r/collegebasketball, and kenpom (Unused)
 def get_teams():
-    with open('cbbscorebot/team_list.txt','r') as imp_file:
+    with open('data/team_list.txt','r') as imp_file:
         lines=imp_file.readlines()
     flairs={}
     rank_names={}
@@ -14,7 +14,7 @@ def get_teams():
     return flairs,rank_names
 
 def get_teams_test():
-    with open('cbbscorebot/team_list.txt','r') as imp_file:
+    with open('data/team_list.txt','r') as imp_file:
         lines=imp_file.readlines()
     flairs={}
     rank_names={}

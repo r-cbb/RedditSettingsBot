@@ -22,11 +22,11 @@ def get_rcbb_poll():
         ranking.append("#"+str(int(team_rank))+"|"+flairs[rank_names[teamstring]]+"|"+team.replace('&amp;','&')+" "+team_fpv+"|"+str(int(team_vote)))
         headerranking.append(flairs[rank_names[teamstring]])
             
-    with open('cbbscorebot/ranking.txt','w') as f:
+    with open('data/ranking.txt','w') as f:
         for team in ranking:
             f.write(team+'\n')
         
-    with open('cbbscorebot/headerranking.txt','w') as f:
+    with open('data/headerranking.txt','w') as f:
         for team in headerranking:
             if team == headerranking[-1]:
                 f.write(team)
