@@ -1,6 +1,7 @@
 credentials.py
 __pycache__/
 log.txt
+logupdate.txt
 authorized_keys
 RedditSettingsBot
 *.pyc
