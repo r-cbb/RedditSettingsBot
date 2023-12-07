@@ -144,7 +144,7 @@ Lindenwood,[](#f/lindenwood),Lindenwood,Lindenwood
 Lipscomb,[](#f/lipscomb),Lipscomb,Lipscomb
 Little Rock,[](#f/ualr),Little Rock,Little Rock
 Long Beach State,[](#f/csulongbeach),Long Beach State,Long Beach St.
-Long Island University,[](#f/liu),LIU,LIU
+Long Island University,[](#f/longisland),LIU,LIU
 Longwood,[](#f/longwood),Longwood,Longwood
 Louisiana,[](#f/louisiana),Louisiana,Louisiana
 Louisiana Tech,[](#f/louisianatech),Louisiana Tech,Louisiana Tech
@@ -327,7 +327,7 @@ UNLV,[](#f/unlv),UNLV,UNLV
 USC,[](#f/usc),USC,USC
 UT Arlington,[](#f/utarlington),UT Arlington,UT Arlington
 UT Martin,[](#f/utmartin),UT Martin,Tennessee Martin
-UT Rio Grande Valley,[](#f/texasriograndevalley),UTRGV,UT Rio Grande Valley
+UT Rio Grande Valley,[](#f/utrgv),UTRGV,UT Rio Grande Valley
 Utah,[](#f/utah),Utah,Utah
 Utah State,[](#f/utahstate),Utah State,Utah St.
 Utah Tech,[](#f/utahtech),Utah Tech,Utah Tech
