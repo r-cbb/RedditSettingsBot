@@ -294,7 +294,7 @@ Tennessee State,[](#f/tennesseestate),Tennessee State,Tennessee St.
 Tennessee Tech,[](#f/tennesseetech),Tennessee Tech,Tennessee Tech
 Texas,[](#f/texas),Texas,Texas
 Texas A&M,[](#f/texasam),Texas A&M,Texas A&M
-East Texas A&M,[](#f/texasamcommerce),Texas A&M–Commerce,Texas A&M Commerce
+East Texas A&M,[](#f/texasamcommerce),Texas A&M–Commerce,East Texas A&M
 Texas A&M-Corpus Christi,[](#f/texasamcorpuschristi),Texas A&M–Corpus Christi,Texas A&M Corpus Chris
 Texas Southern,[](#f/texassouthern),Texas Southern,Texas Southern
 Texas State,[](#f/texasstate),Texas State,Texas St.
