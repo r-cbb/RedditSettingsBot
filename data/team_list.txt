@@ -142,7 +142,7 @@ Lindenwood,[](#f/lindenwood),Lindenwood,Lindenwood
 Lipscomb,[](#f/lipscomb),Lipscomb,Lipscomb
 Little Rock,[](#f/ualr),Little Rock,Little Rock
 Long Beach State,[](#f/csulongbeach),Long Beach State,Long Beach St.
-Long Island University,[](#f/liu),LIU,LIU
+Long Island University,[](#f/longisland),LIU,LIU
 Longwood,[](#f/longwood),Longwood,Longwood
 Louisiana,[](#f/louisiana),Louisiana,Louisiana
 Louisiana Tech,[](#f/louisianatech),Louisiana Tech,Louisiana Tech
