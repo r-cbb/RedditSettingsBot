@@ -227,56 +227,37 @@ def setnetwork(game,gamestring):
         
     return gamestring
 
+def extract_teams(game_thread):
+    # Remove the [Game Thread] prefix if it exists
+    clean_string = game_thread.replace("[Game Thread] ", "")
+    
+    # Use regex to split teams, accounting for various formats
+    match = re.match(r'^\s*#?\d*\s*(.*?)\s*@\s*#?\d*\s*(.*?)\s*\(', clean_string)
+    
+    if match:
+        away_team = match.group(1).strip()
+        home_team = match.group(2).strip()
+        return (away_team, home_team)
+    
+    # Fallback if regex fails
+    raise ValueError("Could not extract teams from the string")
+
 def addgamethread(url,game,gamestring,hasgamethread):
     for key in url.keys():
         if "[Game Thread]" in key:
-            (awaykey,homekey)=str(key).replace('[Game Thread] ','').split('@')
+            (awaykey,homekey)=extract_teams(key)
             
-            if awaykey.startswith('#'):
-                # print('Entered Away If Statement')
-                i = 1
-                while i < 26:
-                    # print('#'+str(i))
-                    if awaykey.startswith('#'+str(i)+' '):
-                        if i < 10:
-                            awaykey=awaykey[3:]
-                        else:
-                            awaykey=awaykey[4:]
-                        break
-                    i = i + 1
-                
-            if homekey[1:].startswith('#'):
-                # print('Entered Home If Statement')
-                i = 1
-                while i < 26:
-                    # print('#'+str(i))
-                    if homekey[1:].startswith('#'+str(i)+' '):
-                        if i < 10:
-                            homekey=homekey[4:]
-                        else:
-                            homekey=homekey[5:]
-                        break
-                    i = i + 1
-            else:
-                homekey=homekey[1:]
-            
-            # print("AwayKey:"+awaykey[:-1]+". Away:"+team2+".")
-            # print()
-            
-            # print("HomeKey:" + homekey[0:len(game['hometeam'])]+". Home:" + game['hometeam']+". "+homekey[len(game['hometeam'])-1:])
-            # print()
-            # print(homekey[len(team2)-1:])
-                        
-            # 14 is the maximum value of the game time in title.
-            if game['awayteam'] == awaykey[:-1] and game['hometeam'] == homekey[0:len(game['hometeam'])] and len(homekey[len(game['hometeam']):]) <= 14: 
-                # print("AwayKey:"+awaykey[:-1]+". Away:"+game['awayteam']+".")
-                # print("HomeKey:" + homekey[0:len(game['hometeam'])]+". Home:" + game['hometeam']+". Rest of Key: "+homekey[len(game['hometeam']):])
+            # print("AwayKey: " + awaykey + "; AwayTeam: " + game['awayteam'] + "; HomeKey: " + homekey + "; HomeTeam: " + game['hometeam'])
+
+            if game['awayteam'] == awaykey and game['hometeam'] == homekey: 
                 gamestring += "[" + str(game['homescore']) + "-" + str(game['awayscore']) + "](" + url[key] + ")"
                 hasgamethread = True
                 break
     else:
         gamestring += str(game['homescore']) + "-" + str(game['awayscore'])
-        
+
+    # print(gamestring)
+    
     return gamestring, hasgamethread
 	
 def updateschedule(r):
