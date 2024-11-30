@@ -6,3 +6,4 @@ authorized_keys
 RedditSettingsBot
 *.pyc
 Backups
+user_list.txt

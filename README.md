@@ -11,10 +11,12 @@ Overview of files:
 
 - `top25post.py:`: Posts the top 25 on a post when pulled.
 - `top25update.py`: Updates the top 25 log weekly.  Limits pulls to only once a week.
+- `top25message.py`: Sends reminder message to the user poll voters.
 
 - `data/headerranking.txt`: Storage of top 25 header
 - `data/nond1_list.txt`: Used when wanting to verify if a team is missing.  Commented out in sidebar.py
 - `data/ranking.txt`: Storage Location of /r/collegebasketball Rankings
 - `data/team_list.txt`: List of teams with their ESPN tean name, flair, cbbpoll.com name, and Kenpom name.
+- `data/user_list_example.txt`: Example user list. user_list.txt used in the top25message.py.  Remove _example and add the usernames required.
 
 Special Thanks to ischmidt20 for inspirations of various improvements and additional updates.
