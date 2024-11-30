@@ -241,6 +241,7 @@ def extract_teams(game_thread):
     
     # Fallback if regex fails
     raise ValueError("Could not extract teams from the string")
+
 def addgamethread(url,game,gamestring,hasgamethread):
     for key in url.keys():
         if "[Game Thread]" in key:
