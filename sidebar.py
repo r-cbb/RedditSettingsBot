@@ -29,19 +29,26 @@ def get_teams():
     except:
         print("Failed to finish get_teams")
         raise
+
+def recent_submission(i_utctime, hours=24):
+    submission_time = datetime.datetime.fromtimestamp(i_utctime,tz=datetime.timezone.utc)
+    current_time = datetime.datetime.now(datetime.timezone.utc)
+    
+    time_difference = current_time - submission_time
+    
+    return time_difference <= datetime.timedelta(hours=hours)
 	
 def get_gamethreads(r):
     try:
-        submissions = r.redditor('cbbbot').submissions.new()
+        submissions = r.redditor('cbbbot').submissions.new(limit=200)
         
         url = {}
-        
         for submission in submissions:
             link = submission.shortlink
             title = submission.title
-            time_created = submission.created_utc
             
-            url[title]=link
+            if recent_submission(submission.created_utc,hours=24):
+                url[title]=link
             
         return url
     except:
@@ -229,35 +236,67 @@ def setnetwork(game,gamestring):
 
 def extract_teams(game_thread):
     # Remove the [Game Thread] prefix if it exists
-    clean_string = game_thread.replace("[Game Thread] ", "")
+    clean_string = game_thread.replace("[Game Thread] ", "").replace("[Post Game Thread] ", "")
     
     # Use regex to split teams, accounting for various formats
-    match = re.match(r'^\s*#?\d*\s*(.*?)\s*@\s*#?\d*\s*(.*?)\s*\(', clean_string)
+    game_thread_match = re.match(r'^\s*#?\d*\s*(.*?)\s*@\s*#?\d*\s*(.*?)\s*\(', clean_string)
     
-    if match:
-        away_team = match.group(1).strip()
-        home_team = match.group(2).strip()
+    if game_thread_match:
+        away_team = game_thread_match.group(1).strip()
+        home_team = game_thread_match.group(2).strip()
         return (away_team, home_team)
     
+    post_game_thread = re.match(r'^\s*#?\d*\s*(.*?)\s*defeats\s*#?\d*\s*(.*?)\s*,', clean_string)
+    
+    if post_game_thread:
+        winning_team = post_game_thread.group(1).strip()
+        losing_team = post_game_thread.group(2).strip()
+        return (winning_team, losing_team)
+        
     # Fallback if regex fails
     raise ValueError("Could not extract teams from the string")
 
 def addgamethread(url,game,gamestring,hasgamethread):
-    for key in url.keys():
-        if "[Game Thread]" in key:
-            (awaykey,homekey)=extract_teams(key)
-            
-            # print("AwayKey: " + awaykey + "; AwayTeam: " + game['awayteam'] + "; HomeKey: " + homekey + "; HomeTeam: " + game['hometeam'])
+    post_game_thread = {}
+    game_thread = {}
 
-            if game['awayteam'] == awaykey and game['hometeam'] == homekey: 
-                gamestring += "[" + str(game['homescore']) + "-" + str(game['awayscore']) + "](" + url[key] + ")"
+    # Separate game threads and post-game threads
+    for key in url.keys():
+        if "[Post Game Thread]" in key:
+            try:
+                (awaykey, homekey) = extract_teams(key)
+                post_game_thread[key] = url[key]
+            except ValueError:
+                continue
+        
+        elif "[Game Thread]" in key:
+            try:
+                (awaykey, homekey) = extract_teams(key)
+                game_thread[key] = url[key]
+            except ValueError:
+                continue
+    
+    # Try to match a post-game thread
+    for key, thread_url in post_game_thread.items():
+        (awaykey, homekey) = extract_teams(key)
+        if (game['awayteam'] == awaykey and game['hometeam'] == homekey) or (game['awayteam'] == homekey and game['hometeam'] == awaykey):
+            gamestring += "[" + str(game['homescore']) + "-" + str(game['awayscore']) + "](" + thread_url + ")"
+            hasgamethread = True
+            break
+    
+    # No post-game thread, Try game threads
+    else:
+        for key, thread_url in game_thread.items():
+            (awaykey, homekey) = extract_teams(key)
+            if game['awayteam'] == awaykey and game['hometeam'] == homekey:
+                gamestring += "[" + str(game['homescore']) + "-" + str(game['awayscore']) + "](" + thread_url + ")"
                 hasgamethread = True
                 break
-    else:
-        gamestring += str(game['homescore']) + "-" + str(game['awayscore'])
-
-    # print(gamestring)
     
+    # If no thread found, add the score
+    if not hasgamethread:
+        gamestring += str(game['homescore']) + "-" + str(game['awayscore'])
+   
     return gamestring, hasgamethread
 	
 def updateschedule(r):
