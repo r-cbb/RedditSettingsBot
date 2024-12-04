@@ -1,4 +1,4 @@
-certifi==2023.7.22
+certifi==2024.7.4
 chardet==5.1.0
 charset-normalizer==2.1.1
 fake-useragent==1.1.1
